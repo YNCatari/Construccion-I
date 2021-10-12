@@ -14,7 +14,8 @@
 
     <title>Dashboard / EsSalud</title>
     <link href="~/Source/css/app.css" rel="stylesheet" />
-   
+
+    <link href="~/Source/css/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -23,7 +24,7 @@
         <nav id="sidebar" class="sidebar">
             <div class="sidebar-content js-simplebar">
                 <a class="sidebar-brand" href="#">
-                    <span class="align-middle">EsSalud</span>
+                    <img src="~/assets/images/logo.png" />
                 </a>
 
                 <ul class="sidebar-nav">
@@ -32,18 +33,18 @@
                     </li>
 
                     <li class="sidebar-item active">
-                        <a class="sidebar-link" href="index.html">
+                        <a class="sidebar-link" href="~/Home/Index">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                         </a>
                     </li>
                     <br />
                     <li class="sidebar-item">
                         <a data-bs-target="#pages" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle" data-feather="layout"></i> <span class="align-middle">Gestion Usuarios</span>
+                            <i class="align-middle" data-feather="users"></i> <span class="align-middle">Gestion Usuarios</span>
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Registrar Usuarios</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="#">Listar Usuarios</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="~/Usuarios/Index">Listar Usuarios</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="~/Rol/Agregar">Registrar Roles</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="~/Rol/Index">Listar Roles</a></li>
 
@@ -53,7 +54,7 @@
                     <br />
                     <li class="sidebar-item">
                         <a data-bs-target="#forms" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle" data-feather="check-circle"></i> <span class="align-middle">Gestion Medicos</span>
+                            <i class="align-middle" data-feather="users"></i> <span class="align-middle">Gestion Medicos</span>
                         </a>
                         <ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Registrar Medico</a></li>
@@ -65,7 +66,7 @@
                     <br />
                     <li class="sidebar-item">
                         <a href="#auth" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle" data-feather="users"></i> <span class="align-middle">Gestion Citas</span>
+                            <i class="align-middle" data-feather="mail"></i> <span class="align-middle">Gestion Citas</span>
                         </a>
                         <ul id="auth" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Registrar Citas</a></li>
@@ -75,10 +76,10 @@
                     <br />
                     <li class="sidebar-item">
                         <a data-bs-target="#form-plugins" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Gestion Dosis</span>
+                            <i class="align-middle" data-feather="feather"></i> <span class="align-middle">Gestion Dosis</span>
                         </a>
                         <ul id="form-plugins" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                            <li class="sidebar-item"><a class="sidebar-link" href="#">Registrar Dosis</a></li>
+                            <li class="check"><a class="sidebar-link" href="#">Registrar Dosis</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Listar Dosis</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Registrar Tipo Dosis</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Listar Tipo Dosis</a></li>
@@ -89,16 +90,12 @@
                     <br />
                     <li class="sidebar-item">
                         <a data-bs-target="#datatables" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle" data-feather="list"></i> <span class="align-middle">Gestion Pacientes</span>
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Gestion Pacientes</span>
                         </a>
                         <ul id="datatables" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
 
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Registrar Pacientes</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Listar Pacientes</a></li>
-
-
-
-
                         </ul>
                     </li>
 
@@ -107,7 +104,7 @@
                     <br />
                     <li class="sidebar-item">
                         <a data-bs-target="#ui" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">Gestion Centros</span>
+                            <i class="align-middle" data-feather="home"></i> <span class="align-middle">Gestion Centros</span>
                         </a>
                         <ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Registrar Centros Salud</a></li>
@@ -119,7 +116,7 @@
                     <br />
                     <li class="sidebar-item">
                         <a data-bs-target="#maps" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle" data-feather="map"></i> <span class="align-middle">Frecuencia de Citas</span>
+                            <i class="align-middle" data-feather="bar-chart"></i> <span class="align-middle">Frecuencia de Citas</span>
                         </a>
                         <ul id="maps" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
                             <li class="sidebar-item"><a class="sidebar-link" href="#">Reportes Frecuencia</a></li>
@@ -159,7 +156,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
                                 <div class="dropdown-menu-header">
-                                    4 New Notifications
+                                    4 Notificaciones Nuevas
                                 </div>
 
 
@@ -167,7 +164,7 @@
 
 
                                 <div class="dropdown-menu-footer">
-                                    <a href="#" class="text-muted">Show all notifications</a>
+                                    <a href="#" class="text-muted">Mostrar todas las Notificaciones</a>
                                 </div>
                             </div>
                         </li>
@@ -180,14 +177,14 @@
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
                                 <div class="dropdown-menu-header">
                                     <div class="position-relative">
-                                        4 New Messages
+                                        4 Nuevos Mensajes
                                     </div>
                                 </div>
 
 
 
                                 <div class="dropdown-menu-footer">
-                                    <a href="#" class="text-muted">Show all messages</a>
+                                    <a href="#" class="text-muted">Mostrar todos los Mensajes</a>
                                 </div>
                             </div>
                         </li>
@@ -204,8 +201,8 @@
                                 <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-                                <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+                                <a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings </a>
+                                
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/Login/LogOut">Cerrar Session</a>
                             </div>
@@ -219,7 +216,7 @@
 
                     <div class="row mb-2 mb-xl-3">
                         <div class="col-auto d-none d-sm-block">
-                            <h3><strong>Analytics</strong> Dashboard</h3>
+                            <h3><strong>Vaccination</strong> Dashboard</h3>
                         </div>
                         @RenderBody()
                     </div>
@@ -251,8 +248,10 @@
 
 
     <script src="~/Source/js/app.js"></script>
-    
- 
+    <script src="~/Source/js/jquery-3.5.1.js"></script>
+    <script src="~/Source/js/jquery.dataTables.min.js"></script>
+
+
     <script>
         $(document).ready(function () {
             $("#datatable").DataTable({
