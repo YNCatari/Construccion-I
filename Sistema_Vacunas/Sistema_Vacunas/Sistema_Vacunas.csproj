@@ -283,6 +283,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RolController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -339,6 +340,7 @@
     <Content Include="Views\Rol\Index.cshtml" />
     <Content Include="Views\Rol\Agregar.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

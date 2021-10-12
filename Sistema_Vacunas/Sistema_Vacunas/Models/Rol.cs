@@ -19,7 +19,7 @@ namespace Sistema_Vacunas.Models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id_rol { get; set; }
 
         [Required]

@@ -10,7 +10,7 @@ namespace Sistema_Vacunas.Models
     public partial class Usuarios
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id_usuario { get; set; }
 
         [Required]
@@ -46,6 +46,8 @@ namespace Sistema_Vacunas.Models
         public virtual Rol Rol { get; set; }
 
         ModelVacuna db = new ModelVacuna();
+
+        //login
         public bool Autenticar()
         {
 
@@ -56,6 +58,7 @@ namespace Sistema_Vacunas.Models
 
 
         }
+        //obtener datos del login
         public Usuarios ObtenerDatos(string email)
         {
             var usuario = new Usuarios();
@@ -74,7 +77,87 @@ namespace Sistema_Vacunas.Models
             }
             return usuario;
         }
-
+        //listar usuarios
+        public List<Usuarios> Listar()
+        {
+            var usuarios = new List<Usuarios>();
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    usuarios = db.Usuarios.Include("Rol").ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return usuarios;
+        }
+        //guardar usuarios
+        public void Guardar()
+        {
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    if (this.id_usuario > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        db.Entry(this).State = EntityState.Added;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        //Obtener usuarios
+        public Usuarios Obtener(int id)
+        {
+            var usuarios = new Usuarios();
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    usuarios = db.Usuarios
+                        .Where(x => x.id_usuario == id)
+                        .SingleOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return usuarios;
+        }
+        //Buscar usuarios
+        public List<Usuarios> Buscar(string criterio)
+        {
+            var usuarios = new List<Usuarios>();
+            //string estado = "";
+            //if (criterio == "Activo") estado = "A";
+            //if (criterio == "Inactivo") estado = "I";
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    usuarios = db.Usuarios
+                        .Where(x => x.nombre.Contains(criterio) || x.dni.Contains(criterio))
+                        .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return usuarios;
+        }
 
     }
 }

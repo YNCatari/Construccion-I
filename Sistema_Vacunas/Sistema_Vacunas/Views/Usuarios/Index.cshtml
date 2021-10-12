@@ -1,0 +1,68 @@
+﻿@model List<Sistema_Vacunas.Models.Usuarios>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Page header -->
+<dv class="full-box page-header">
+    <h3 class="text-left">
+        <a href="~/Rol/Agregar/" class="btn btn-success">Nuevo Registro</a> <br />
+        <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Administracion de Roles
+    </h3>
+
+</dv>
+<!--CONTENT-->
+<!-- Content here-->
+<div class="container-fluid">
+    @using (Html.BeginForm("Index", "Usuarios", FormMethod.Post))
+    {
+        <div class="text-righ">
+            @Html.Label("Buscar: ")
+            @Html.TextBox("Criterio")
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    }
+    <div class="table-responsive">
+        <table id="datatable" class="table table-bordered" style="width:80%">
+            <thead>
+                <tr>
+
+                    <th>ID</th>
+                    <th>DNI</th>
+                    <th>NOMBRE</th>
+                    <th>EMAIL</th>
+                    <th>ROL</th>
+                    <th>ESTADO</th>
+                    <th>OPCIONES</th>
+
+                    
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr class="text-center">
+                    <td>@(item.id_usuario)</td>
+                    <td>@(item.dni)</td>
+                    <td>@(item.nombre)</td>
+                    <td>@(item.email)</td>
+                    <td>@(item.Rol.descripcion)</td>
+                    <td>
+                        <a href="#" class="btn btn-danger">@(item.estado == "A" ? "Activo" : "Inactivo" )</a>
+                    </td>
+                    <td>
+                        <a href="~/Rol/Agregar/@item.id_usuario" class="btn btn-primary">Actualizar</a>
+                    </td>
+
+
+
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
