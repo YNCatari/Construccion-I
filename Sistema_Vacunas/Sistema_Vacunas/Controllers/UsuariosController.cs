@@ -21,8 +21,7 @@ namespace Sistema_Vacunas.Controllers
             else
             {
                 return View(objUsu.Buscar(criterio));
-            }
-            return View();
+            }            
         }
         public ActionResult Agregar(int id = 0)
         {
@@ -31,17 +30,23 @@ namespace Sistema_Vacunas.Controllers
                    objUsu.Obtener(id));
 
         }
-        public ActionResult Guardar(Rol model)
+        public ActionResult Guardar(Usuarios model)
         {
             if (ModelState.IsValid)
             {
                 model.Guardar();
-                return Redirect("~/Rol/Index");
+                return Redirect("~/Usuarios/Index");
             }
             else
             {
-                return View("~/Rol/Agregar");
+                return View("~/Usuarios/Agregar");
             }
+        }
+        public ActionResult Buscar(string criterio)
+        {
+            return View(criterio == null || criterio == "" ?
+                objUsu.Listar() :
+                objUsu.Buscar(criterio));
         }
     }
 }

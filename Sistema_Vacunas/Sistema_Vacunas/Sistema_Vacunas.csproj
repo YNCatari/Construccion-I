@@ -311,6 +311,7 @@
     <Content Include="Views\Rol\Agregar.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Usuarios\Agregar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
