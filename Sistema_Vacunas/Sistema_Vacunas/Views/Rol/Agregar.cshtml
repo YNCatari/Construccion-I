@@ -23,19 +23,19 @@
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
-                    <label for="producto_nombre" class="bmd-label-floating">Nombre</label>
+                    <label for="producto_nombre" class="bmd-label-floating">Nombre:</label>
                     @Html.TextBoxFor(x => x.nombre, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.nombre, null, new { @class = "label label-danger" })
                 </div>
                 <div class="form-group">
-                    <label for="producto_descripcion" class="bmd-label-floating">Descripcion</label>
+                    <label for="producto_descripcion" class="bmd-label-floating">Descripcion:</label>
                     @Html.TextBoxFor(x => x.descripcion, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.descripcion, null, new { @class = "label label-danger" })
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="form-group">
-                    <label for="producto_estado" class="bmd-label-floating">Estado</label>
+                    <label for="producto_estado" class="bmd-label-floating">Estado:</label>
                     <select name="ESTADO" class="form-control">
                         <option @(Model.estado == "A" ? "selected" : "") value="A">Activo</option>
                         <option @(Model.estado == "I" ? "selected" : "") value="I">Inactivo</option>
