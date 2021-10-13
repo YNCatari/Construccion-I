@@ -140,9 +140,6 @@ namespace Sistema_Vacunas.Models
         public List<Usuarios> Buscar(string criterio)
         {
             var usuarios = new List<Usuarios>();
-            //string estado = "";
-            //if (criterio == "Activo") estado = "A";
-            //if (criterio == "Inactivo") estado = "I";
             try
             {
                 using (var db = new ModelVacuna())

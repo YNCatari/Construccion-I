@@ -16,6 +16,7 @@
     <link href="~/Source/css/app.css" rel="stylesheet" />
 
     <link href="~/Source/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Source/css/sweetalert2.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -43,7 +44,7 @@
                             <i class="align-middle" data-feather="users"></i> <span class="align-middle">Gestion Usuarios</span>
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                            <li class="sidebar-item"><a class="sidebar-link" href="#">Registrar Usuarios</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="~/Usuarios/Agregar">Registrar Usuarios</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="~/Usuarios/Index">Listar Usuarios</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="~/Rol/Agregar">Registrar Roles</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="~/Rol/Index">Listar Roles</a></li>
@@ -195,14 +196,14 @@
 
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
 
-                                <img src="~/Source/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Administrador" /> <span class="text-dark">YNCatari</span>
+                                <img src="~/Source/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Administrador" /> <span class="text-dark">Administrador</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings </a>
-                                
+
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/Login/LogOut">Cerrar Session</a>
                             </div>
@@ -250,6 +251,9 @@
     <script src="~/Source/js/app.js"></script>
     <script src="~/Source/js/jquery-3.5.1.js"></script>
     <script src="~/Source/js/jquery.dataTables.min.js"></script>
+    <script src="~/Source/js/jquery.validate.js"></script>
+    <script src="~/Source/js/jquery.validate.unobtrusive.js"></script>
+
 
 
     <script>
