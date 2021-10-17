@@ -7,62 +7,56 @@ using Sistema_Vacunas.Models;
 
 namespace Sistema_Vacunas.Controllers
 {
-   
-    public class RolController : Controller
+    public class PacienteController : Controller
     {
-        // GET: Rol
-        private Rol objRol = new Rol();
-        // GET: Rol
-
+        private Pacientes objPaciente = new Pacientes();
+        // GET: Pacientes
         public ActionResult Index(string criterio)
         {
             if (criterio == null || criterio == "")
             {
-                return View(objRol.Listar());
+                return View(objPaciente.Listar());
             }
             else
             {
-                return View(objRol.Buscar(criterio));
+                return View(objPaciente.Buscar(criterio));
             }
         }
-
         public ActionResult Agregar(int id = 0)
         {
             return View(id == 0 ?
-                   new Rol() :
-                   objRol.Obtener(id));
+                   new Pacientes() :
+                   objPaciente.Obtener(id));
 
         }
-
         public ActionResult Actualizar()
         {
             return View();
         }
-
-        public ActionResult Guardar(Rol model)
+        public ActionResult Guardar(Pacientes model)
         {
             if (ModelState.IsValid)
             {
                 model.Guardar();
-                
-                return Redirect("~/Rol/Index");
+                return Redirect("~/Paciente/Index");
             }
             else
             {
-            
-                return View("~/Rol/Agregar");
+                return View("~/Paciente/Agregar");
             }
         }
-
         public ActionResult Buscar(string criterio)
         {
             return View(criterio == null || criterio == "" ?
-                objRol.Listar() :
-                objRol.Buscar(criterio));
+                objPaciente.Listar() :
+                objPaciente.Buscar(criterio));
         }
-
-
-
-
+        public ActionResult Eliminar(int id)
+        {
+            objPaciente.id_pacientes = id;
+            objPaciente.Eliminar();
+            return Redirect("~/Paciente/Index");
+        }
+        
     }
 }
