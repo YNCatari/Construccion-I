@@ -1,7 +1,7 @@
 ﻿@model Sistema_Vacunas.Models.Usuarios
 @{
     ViewBag.Title = "Agregar";
-    List<Sistema_Vacunas.Models.Rol> tipousuario = ViewBag.tipo;
+    List<Sistema_Vacunas.Models.Rol> tipousuario = ViewBag.Tipo;
 }
 
 <!-- Page header -->
@@ -28,56 +28,77 @@
                     @Html.TextBoxFor(x => x.nombre, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.nombre, null, new { @class = "label label-danger" })
                 </div>
+            </div>
+            <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="producto_email" class="bmd-label-floating">Email:</label>
                     @Html.TextBoxFor(x => x.email, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.email, null, new { @class = "label label-danger" })
                 </div>
+            </div>
+            <div class="col-12 col-md-6">
                 <div class="form-group">
-                    <label for="producto_dni" class="bmd-label-floating">DNI:</label>
+                    <label for="producto_Dni" class="bmd-label-floating">Documento Identidad:</label>
                     @Html.TextBoxFor(x => x.dni, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.dni, null, new { @class = "label label-danger" })
                 </div>
+            </div>
+            <div class="col-12 col-md-6">
                 <div class="form-group">
-                    <label for="producto_direccion" class="bmd-label-floating">Direccion:</label>
+                    <label for="producto_Direccion" class="bmd-label-floating">Direccion:</label>
                     @Html.TextBoxFor(x => x.direccion, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.direccion, null, new { @class = "label label-danger" })
                 </div>
+            </div>
+            <div class="col-12 col-md-6">
                 <div class="form-group">
-                    <label for="producto_telefono" class="bmd-label-floating">Telefono / Movil:</label>
+                    <label for="producto_Telefono" class="bmd-label-floating">Telefono / Movil:</label>
                     @Html.TextBoxFor(x => x.telefono, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.telefono, null, new { @class = "label label-danger" })
                 </div>
+            </div>
+            <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="producto_contraseña" class="bmd-label-floating">Contraseña:</label>
                     @Html.TextBoxFor(x => x.contraseña, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.contraseña, null, new { @class = "label label-danger" })
                 </div>
+            </div>
+            <div class="col-12 col-md-6">
                 <div class="form-group">
-                    <label for="producto_idrol" class="bmd-label-floating">Seleccion de Roles:</label>
-                    @Html.TextBoxFor(x => x.id_rol, new { @class = "form-control" })
-                    @*@Html.DropDownListFor(x => x.id_rol, new SelectList(Model.Rol.descripcion))*@
+                    <label for="producto_rol" class="bmd-label-floating">Asignar Rol:</label>
+                    <select name="id_rol" class="form-control">
+                        <option @(Model.id_rol.Equals("") ? "selected" : "") value="">--Seleccione--</option>
+                        @foreach (var t in tipousuario)
+                        {
+                            <option @(Model.id_rol.Equals(t.id_rol) ? "selected" : "")
+                                    value="@t.id_rol">
+                                @t.descripcion
+                            </option>
+                        }
+                    </select>
                     @Html.ValidationMessageFor(x => x.id_rol, null, new { @class = "label label-danger" })
                 </div>
             </div>
-            <div class="col-12 col-md-4">
-                <div class="form-group">
-                    <label for="producto_estado" class="bmd-label-floating">Estado</label>
-                    <select name="ESTADO" class="form-control">
-                        <option @(Model.estado == "A" ? "selected" : "") value="A">Activo</option>
-                        <option @(Model.estado == "I" ? "selected" : "") value="I">Inactivo</option>
-                    </select>
-                    @Html.ValidationMessageFor(x => x.estado, null, new { @class = "label label-danger" })
+
+                <div class="col-12 col-md-4">
+                    <div class="form-group">
+                        <label for="producto_estado" class="bmd-label-floating">Estado</label>
+                        <select name="ESTADO" class="form-control">
+                            <option @(Model.estado == "A" ? "selected" : "") value="A">Activo</option>
+                            <option @(Model.estado == "I" ? "selected" : "") value="I">Inactivo</option>
+                        </select>
+                        @Html.ValidationMessageFor(x => x.estado, null, new { @class = "label label-danger" })
+                    </div>
                 </div>
             </div>
+            <p class="text-center" style="margin-top: 40px;">
+
+
+                <button type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
+                &nbsp; &nbsp;
+                <button type="reset" class="btn btn-danger"><i class="fas fa-paint-roller"></i> &nbsp; Cancelar</button>
+            </p>
+            }
         </div>
-        <p class="text-center" style="margin-top: 40px;">
-
-
-            <button type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
-            &nbsp; &nbsp;
-            <button type="reset" class="btn btn-danger"><i class="fas fa-paint-roller"></i> &nbsp; Cancelar</button>
-        </p>
-    }
-</div>
 

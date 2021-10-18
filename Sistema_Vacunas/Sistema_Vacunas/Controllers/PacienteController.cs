@@ -29,10 +29,6 @@ namespace Sistema_Vacunas.Controllers
                    objPaciente.Obtener(id));
 
         }
-        public ActionResult Actualizar()
-        {
-            return View();
-        }
         public ActionResult Guardar(Pacientes model)
         {
             if (ModelState.IsValid)

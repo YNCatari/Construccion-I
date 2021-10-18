@@ -10,7 +10,7 @@ namespace Sistema_Vacunas.Controllers
     public class UsuariosController : Controller
     {
         // GET: Usuarios
-        //private Rol objRol = new Rol();
+        private Rol objRol = new Rol();
         private Usuarios objUsu = new Usuarios();
         public ActionResult Index(string criterio)
         {
@@ -25,6 +25,7 @@ namespace Sistema_Vacunas.Controllers
         }
         public ActionResult Agregar(int id = 0)
         {
+            ViewBag.Tipo = objRol.Listar();
             return View(id == 0 ?
                    new Usuarios() :
                    objUsu.Obtener(id));

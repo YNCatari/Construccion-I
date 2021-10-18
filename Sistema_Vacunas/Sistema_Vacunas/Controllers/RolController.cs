@@ -34,11 +34,6 @@ namespace Sistema_Vacunas.Controllers
 
         }
 
-        public ActionResult Actualizar()
-        {
-            return View();
-        }
-
         public ActionResult Guardar(Rol model)
         {
             if (ModelState.IsValid)

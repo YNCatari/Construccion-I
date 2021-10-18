@@ -259,6 +259,8 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
     <Compile Include="Controllers\RolController.cs" />
+    <Compile Include="Controllers\TipoDosisController.cs" />
+    <Compile Include="Controllers\TipoSaludController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -320,6 +322,10 @@
     <Content Include="Views\Usuarios\Agregar.cshtml" />
     <Content Include="Views\Paciente\Agregar.cshtml" />
     <Content Include="Views\Paciente\Index.cshtml" />
+    <Content Include="Views\TipoDosis\Index.cshtml" />
+    <Content Include="Views\TipoDosis\Agregar.cshtml" />
+    <Content Include="Views\TipoSalud\Index.cshtml" />
+    <Content Include="Views\TipoSalud\Agregar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
