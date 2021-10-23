@@ -16,7 +16,7 @@
 <!--CONTENT-->
 <!-- Content here-->
 <div class="container-fluid">
-    @using (Html.BeginForm("Guardar", "TipoDosis", FormMethod.Post, new { id = "frm-productos" }))
+    @using (Html.BeginForm("Registrar", "TipoDosis", FormMethod.Post, new { id = "frm-productos" }))
     {
         @Html.HiddenFor(x => x.id_tipodosis)
         <form action="" class="form-neon" autocomplete="off">

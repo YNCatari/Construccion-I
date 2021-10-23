@@ -90,7 +90,7 @@ namespace Sistema_Vacunas.Models
             }
             return tipo;
         }
-        public void Guardar()
+        public void Registrar()
         {
             try
             {

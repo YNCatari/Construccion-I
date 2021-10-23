@@ -16,7 +16,7 @@
 <!--CONTENT-->
 <!-- Content here-->
 <div class="container-fluid">
-    @using (Html.BeginForm("Guardar", "Usuarios", FormMethod.Post, new { id = "frm-productos" }))
+    @using (Html.BeginForm("Registrar", "Usuarios", FormMethod.Post, new { id = "frm-productos" }))
     {
         @Html.HiddenFor(x => x.id_usuario)
         <div><i class="fas fa-user"></i> &nbsp; CREANDO NUEVO USUARIO</div>
@@ -81,24 +81,24 @@
                 </div>
             </div>
 
-                <div class="col-12 col-md-4">
-                    <div class="form-group">
-                        <label for="producto_estado" class="bmd-label-floating">Estado</label>
-                        <select name="ESTADO" class="form-control">
-                            <option @(Model.estado == "A" ? "selected" : "") value="A">Activo</option>
-                            <option @(Model.estado == "I" ? "selected" : "") value="I">Inactivo</option>
-                        </select>
-                        @Html.ValidationMessageFor(x => x.estado, null, new { @class = "label label-danger" })
-                    </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label for="producto_estado" class="bmd-label-floating">Estado</label>
+                    <select name="ESTADO" class="form-control">
+                        <option @(Model.estado == "A" ? "selected" : "") value="A">Activo</option>
+                        <option @(Model.estado == "I" ? "selected" : "") value="I">Inactivo</option>
+                    </select>
+                    @Html.ValidationMessageFor(x => x.estado, null, new { @class = "label label-danger" })
                 </div>
             </div>
-            <p class="text-center" style="margin-top: 40px;">
-
-
-                <button type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
-                &nbsp; &nbsp;
-                <button type="reset" class="btn btn-danger"><i class="fas fa-paint-roller"></i> &nbsp; Cancelar</button>
-            </p>
-            }
         </div>
+        <p class="text-center" style="margin-top: 40px;">
+
+
+            <button type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
+            &nbsp; &nbsp;
+            <button type="reset" class="btn btn-danger"><i class="fas fa-paint-roller"></i> &nbsp; Cancelar</button>
+        </p>
+    }
+</div>
 

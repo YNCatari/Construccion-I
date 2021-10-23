@@ -29,11 +29,11 @@ namespace Sistema_Vacunas.Controllers
                    objPaciente.Obtener(id));
 
         }
-        public ActionResult Guardar(Pacientes model)
+        public ActionResult Registrar(Pacientes model)
         {
             if (ModelState.IsValid)
             {
-                model.Guardar();
+                model.Registrar();
                 return Redirect("~/Paciente/Index");
             }
             else

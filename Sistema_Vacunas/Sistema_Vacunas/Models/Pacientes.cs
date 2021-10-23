@@ -105,7 +105,7 @@ namespace Sistema_Vacunas.Models
             }
             return pacientes;
         }
-        public void Guardar()
+        public void Registrar()
         {
             try
             {

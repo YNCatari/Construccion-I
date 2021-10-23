@@ -319,13 +319,13 @@
     <Content Include="Views\Rol\Agregar.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
-    <Content Include="Views\Usuarios\Agregar.cshtml" />
     <Content Include="Views\Paciente\Agregar.cshtml" />
     <Content Include="Views\Paciente\Index.cshtml" />
     <Content Include="Views\TipoDosis\Index.cshtml" />
     <Content Include="Views\TipoDosis\Agregar.cshtml" />
     <Content Include="Views\TipoSalud\Index.cshtml" />
     <Content Include="Views\TipoSalud\Agregar.cshtml" />
+    <Content Include="Views\Usuarios\Agregar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -31,11 +31,11 @@ namespace Sistema_Vacunas.Controllers
                    objUsu.Obtener(id));
 
         }
-        public ActionResult Guardar(Usuarios model)
+        public ActionResult Registrar(Usuarios model)
         {
             if (ModelState.IsValid)
             {
-                model.Guardar();
+                model.Registrar();
                 return Redirect("~/Usuarios/Index");
             }
             else

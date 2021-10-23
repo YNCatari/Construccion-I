@@ -30,11 +30,11 @@ namespace Sistema_Vacunas.Controllers
 
         }
        
-        public ActionResult Guardar(Tipo_Salud model)
+        public ActionResult Registrar(Tipo_Salud model)
         {
             if (ModelState.IsValid)
             {
-                model.Guardar();
+                model.Registrar();
                 return Redirect("~/TipoSalud/Index");
             }
             else

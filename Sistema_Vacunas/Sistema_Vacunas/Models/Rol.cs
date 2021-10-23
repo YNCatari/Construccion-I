@@ -95,7 +95,7 @@ namespace Sistema_Vacunas.Models
             }
             return rol;
         }
-        public void Guardar()
+        public void Registrar()
         {
             try
             {

@@ -34,11 +34,11 @@ namespace Sistema_Vacunas.Controllers
 
         }
 
-        public ActionResult Guardar(Rol model)
+        public ActionResult Registrar(Rol model)
         {
             if (ModelState.IsValid)
             {
-                model.Guardar();
+                model.Registrar();
                 
                 return Redirect("~/Rol/Index");
             }

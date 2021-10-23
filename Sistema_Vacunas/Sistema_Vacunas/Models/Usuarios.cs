@@ -95,7 +95,7 @@ namespace Sistema_Vacunas.Models
             return usuarios;
         }
         //guardar usuarios
-        public void Guardar()
+        public void Registrar()
         {
             try
             {
