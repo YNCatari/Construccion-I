@@ -256,6 +256,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HorariosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
     <Compile Include="Controllers\RolController.cs" />
@@ -326,6 +327,8 @@
     <Content Include="Views\TipoSalud\Index.cshtml" />
     <Content Include="Views\TipoSalud\Agregar.cshtml" />
     <Content Include="Views\Usuarios\Agregar.cshtml" />
+    <Content Include="Views\Horarios\Index.cshtml" />
+    <Content Include="Views\Horarios\Agregar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

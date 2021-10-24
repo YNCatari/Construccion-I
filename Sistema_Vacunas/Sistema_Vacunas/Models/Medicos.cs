@@ -5,6 +5,9 @@ namespace Sistema_Vacunas.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Data.Entity;
+    using System.Linq;
+
 
     public partial class Medicos
     {
@@ -15,7 +18,7 @@ namespace Sistema_Vacunas.Models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id_medico { get; set; }
 
         [Required]
@@ -64,5 +67,7 @@ namespace Sistema_Vacunas.Models
         public virtual Horario Horario { get; set; }
 
         public virtual Rol Rol { get; set; }
+
+
     }
 }

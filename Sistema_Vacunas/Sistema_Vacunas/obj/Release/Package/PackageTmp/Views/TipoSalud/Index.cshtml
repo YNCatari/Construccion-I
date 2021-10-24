@@ -1,0 +1,54 @@
+﻿@model List<Sistema_Vacunas.Models.Tipo_Salud>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Page header -->
+<dv class="full-box page-header">
+    <h3 class="text-left">
+        <a href="~/TipoSalud/Agregar/" class="btn btn-success">Nuevo Registro</a> <br />
+        <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Administracion de Tipo de Centro de Salud
+    </h3>
+
+</dv>
+
+<!--CONTENT-->
+<!-- Content here-->
+<!-- Content here-->
+<div class="container-fluid">
+    @using (Html.BeginForm("Index", "TipoSalud", FormMethod.Post))
+    {
+    }
+    <div class="table-responsive">
+        <table id="datatable" class="display" style="width:100%">
+            <thead>
+                <tr class="text-center">
+
+                    <th>ID</th>
+                    <th>Nombres</th>
+                    <th>Descripcion</th>
+                    <th>Estado</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center">
+                        <td>@(item.id_tiposalud)</td>
+                        <td>@(item.nombre)</td>
+                        <td>@(item.descripcion)</td>
+                        <td>
+                            <a href="#" class="btn btn-danger">@(item.estado == "A" ? "Activo" : "Inactivo" )</a>
+                        </td>
+                        <td>
+                            <a href="~/TipoSalud/Agregar/@item.id_tiposalud" class="btn btn-primary">Actualizar</a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
