@@ -68,6 +68,90 @@ namespace Sistema_Vacunas.Models
 
         public virtual Rol Rol { get; set; }
 
+        //ModelVacuna db = new ModelVacuna();
+
+        //listar usuarios
+        public List<Medicos> Listar()
+        {
+            var medicos = new List<Medicos>();
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    //usuarios = db.Usuarios.Include("Rol").ToList();
+                    medicos = db.Medicos
+                        .Include("Rol")
+                        .Include("Horario")
+                        .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return medicos;
+        }
+        //guardar usuarios
+        public void Registrar()
+        {
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    if (this.id_medico > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        db.Entry(this).State = EntityState.Added;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        //Obtener usuarios
+        public Medicos Obtener(int id)
+        {
+            var medicos = new Medicos();
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    medicos = db.Medicos
+                        .Where(x => x.id_medico == id)
+                        .SingleOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return medicos;
+        }
+        //Buscar usuarios
+        public List<Medicos> Buscar(string criterio)
+        {
+            var medicos = new List<Medicos>();
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    medicos = db.Medicos
+                        .Where(x => x.nombre.Contains(criterio) || x.dni.Contains(criterio))
+                        .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return medicos;
+        }
 
     }
 }

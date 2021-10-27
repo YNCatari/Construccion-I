@@ -1,0 +1,66 @@
+﻿@model List<Sistema_Vacunas.Models.Medicos>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Page header -->
+<dv class="full-box page-header">
+    <h3 class="text-left">
+        <a href="~/Medicos/Agregar/" class="btn btn-success">Nuevo Registro</a> <br />
+        <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Administracion de Medicos
+    </h3>
+
+</dv>
+<!--CONTENT-->
+<!-- Content here-->
+<div class="container-fluid">
+    @using (Html.BeginForm("Index", "Medicos", FormMethod.Post))
+    {
+    }
+    <div class="table-responsive">
+        <table id="datatable" class="display" style="width:100%">
+            <thead>
+                <tr class="text-center">
+
+                    <th>#</th>
+                    <th>DNI</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDOS</th>
+                    <th>TELEFONO</th>
+                    <th>SEXO</th>
+                    <th>EMAIL</th>
+                    <th>CONTRASEÑA</th>
+                    <th>ROL</th>
+                    <th>HORARIO</th>
+                    <th>ESTADO</th>
+                    <th>OPCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center">
+                        <td>@(item.id_medico)</td>
+                        <td>@(item.dni)</td>
+                        <td>@(item.nombre)</td>
+                        <td>@(item.apellidos)</td>
+                        <td>@(item.telefono)</td>
+                        <td>@(item.sexo)</td>
+
+                        <td>@(item.email)</td>
+                        <td>@(item.contraseña)</td>
+                        <td>@(item.Rol.descripcion)</td>
+                        @*<td>@(item.id_horario == 1 ? "Mañana" : "Tarde")</td>*@
+                        <td>@item.Horario.iniciohorario -- @item.Horario.iniciofin</td>
+                        <td>
+                            <a href="#" class="btn btn-danger">@(item.estado == "A" ? "Activo" : "Inactivo" )</a>
+                        </td>                     
+                        <td>
+                            <a href="~/Medicos/Agregar/@item.id_medico" class="btn btn-primary">Actualizar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
