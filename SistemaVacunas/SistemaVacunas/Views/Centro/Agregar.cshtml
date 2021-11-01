@@ -1,0 +1,95 @@
+﻿@model SistemaVacunas.Models.Centro
+@{
+    ViewBag.Title = "Agregar";
+    List<SistemaVacunas.Models.Tipo_Salud> tipousuario = ViewBag.Tipo;
+}
+
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Centro de Salud
+    </h3>
+    <p class="text-justify">
+
+    </p>
+</div>
+<!--CONTENT-->
+<!-- Content here-->
+<div class="container-fluid">
+    @using (Html.BeginForm("Registrar", "Centro", FormMethod.Post, new { id = "frm-productos" }))
+    {
+        @Html.HiddenFor(x => x.Id_centro)
+        <div><i class="fas fa-user"></i> &nbsp; CREANDO NUEVO CENTRO DE SALUD</div>
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_nombre" class="bmd-label-floating">Organizacion:</label>
+                    @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_email" class="bmd-label-floating">Direccion:</label>
+                    @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Direccion, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_Dni" class="bmd-label-floating">Av/Calle:</label>
+                    @Html.TextBoxFor(x => x.Calle, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Calle, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_Direccion" class="bmd-label-floating">Ciudad:</label>
+                    @Html.TextBoxFor(x => x.Ciudad, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Ciudad, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_Telefono" class="bmd-label-floating">Distrito:</label>
+                    @Html.TextBoxFor(x => x.Distrito, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Distrito, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_contraseña" class="bmd-label-floating">Codigo Postal:</label>
+                    @Html.TextBoxFor(x => x.Codigo, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Codigo, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_rol" class="bmd-label-floating">Puesto:</label>
+                    <select name="id_rol" class="form-control">
+                        <option @(Model.Id_tiposalud.Equals("") ? "selected" : "") value="">--Seleccione--</option>
+                        @foreach (var t in tipousuario)
+                        {
+                            <option @(Model.Id_tiposalud.Equals(t.Id_tiposalud) ? "selected" : "")
+                                    value="@t.Id_tiposalud">
+                                @t.Descripcion
+                            </option>
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(x => x.Id_tiposalud, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+
+           
+        </div>
+        <p class="text-center" style="margin-top: 40px;">
+
+
+            <button type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
+            &nbsp; &nbsp;
+            <a href="~/Centro" class="btn btn-danger">Cancelar</a>
+        </p>
+    }
+</div>
+

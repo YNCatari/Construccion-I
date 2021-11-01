@@ -1,0 +1,147 @@
+﻿@model SistemaVacunas.Models.Medico
+@{
+    ViewBag.Title = "Agregar";
+    List<SistemaVacunas.Models.Rol> tipousuario = ViewBag.Tipo;
+    List<SistemaVacunas.Models.Horario> tipohorario = ViewBag.Horario;
+}
+
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Medicos
+    </h3>
+    <p class="text-justify">
+
+    </p>
+</div>
+<!--CONTENT-->
+<!-- Content here-->
+<div class="container-fluid">
+    @using (Html.BeginForm("Registrar", "Medico", FormMethod.Post, new { id = "frm-productos" }))
+    {
+        @Html.HiddenFor(x => x.Id_medico)
+        <div><i class="fas fa-user"></i> &nbsp; CREANDO NUEVO MEDICOS</div>
+        <div class="row">
+
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="medico_Dni" class="bmd-label-floating">Documento Identidad:</label>
+                    @Html.TextBoxFor(x => x.Dni, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Dni, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="medico_nombre" class="bmd-label-floating">Nombre:</label>
+                    @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="medico_apellidos" class="bmd-label-floating">Apellidos:</label>
+                    @Html.TextBoxFor(x => x.Apellidos, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Apellidos, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="medico_telefono" class="bmd-label-floating">Telefono / Movil:</label>
+                    @Html.TextBoxFor(x => x.Telefono, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Telefono, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                @Html.LabelFor(x => x.Sexo)
+                <select name="Sexo" class="form-control">
+                    <option @(Model.Sexo == "M" ? "selected" : "") value="M">Mascolino</option>
+                    <option @(Model.Sexo == "F" ? "selected" : "") value="F">Femenino</option>
+                </select>
+                @Html.ValidationMessageFor(x => x.Sexo, null, new { @class = "label label-danger" })
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="medico_email" class="bmd-label-floating">Email:</label>
+                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Email, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="medico_contraseña" class="bmd-label-floating">Contraseña:</label>
+                    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Password, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label for="producto_estado" class="bmd-label-floating">Estado</label>
+                    <select name="ESTADO" class="form-control">
+                        <option @(Model.Estado == "A" ? "selected" : "") value="A">Activo</option>
+                        <option @(Model.Estado == "I" ? "selected" : "") value="I">Inactivo</option>
+                    </select>
+                    @Html.ValidationMessageFor(x => x.Estado, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            @*rol*@
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="medico_rol" class="bmd-label-floating">Asignar Rol:</label>
+                    <select name="id_rol" class="form-control">
+                        <option @(Model.Id_rol.Equals("") ? "selected" : "") value="">--Seleccione--</option>
+                        @foreach (var t in tipousuario)
+                        {
+                            <option @(Model.Id_rol.Equals(t.Id_rol) ? "selected" : "")
+                                    value="@t.Id_rol">
+                                @t.Descripcion
+                            </option>
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(x => x.Id_rol, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+
+            @*Horario*@
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="medico_horario" class="bmd-label-floating">Asignar Horario:</label>
+                    <select name="id_horario" class="form-control">
+                        <option @(Model.Id_horario.Equals("") ? "selected" : "") value="">--Seleccione--</option>
+                        @foreach (var t in tipohorario)
+                        {
+                            <option @(Model.Id_horario.Equals(t.Id_horario) ? "selected" : "")
+                                    value="@t.Id_horario">
+                                @t.Inicio -- @t.Fin
+                            </option>
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(x => x.Id_horario, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+
+
+            @*<div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="medico_horario" class="bmd-label-floating">HORARIO:</label>
+                @Html.TextBoxFor(x => x.id_horario, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.id_horario, null, new { @class = "label label-danger" })
+            </div>
+        </div>*@
+
+
+        </div>
+        <p class="text-center" style="margin-top: 40px;">
+
+
+            <button type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
+            &nbsp; &nbsp;
+            <a href="~/Medico" class="btn btn-danger">Cancelar</a>
+        </p>
+    }
+</div>
+
