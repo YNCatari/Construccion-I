@@ -16,6 +16,7 @@ namespace SistemaVacunas.Controllers
         {
             if (criterio == null || criterio == "")
             {
+               
                 return View(objDosis.Listar());
             }
             else
@@ -36,6 +37,7 @@ namespace SistemaVacunas.Controllers
             if (ModelState.IsValid)
             {
                 model.Registrar();
+                TempData["AlertMessage"] = "Dosis Created Successfully ..!";
                 return Redirect("~/Dosis/Index");
             }
             else
@@ -53,6 +55,7 @@ namespace SistemaVacunas.Controllers
         {
             objDosis.Id_dosis = id;
             objDosis.Eliminar();
+            TempData["AlertMessage"] = "Dosis Delete Successfully ..!";
             return Redirect("~/Dosis/Index");
         }
     }

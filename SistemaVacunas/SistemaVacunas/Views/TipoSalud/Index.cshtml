@@ -19,6 +19,12 @@
     @using (Html.BeginForm("Index", "TipoSalud", FormMethod.Post))
     {
     }
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div class="alert alert-success">
+            <strong>Success !</strong>@TempData["AlertMessage"]
+        </div>
+    }
     <div class="table-responsive">
         <table id="datatable" class="display" style="width:100%">
             <thead>
@@ -42,7 +48,7 @@
                             <a href="#" class="btn btn-danger">@(item.Estado == "A" ? "Activo" : "Inactivo" )</a>
                         </td>
                         <td>
-                            <a onclick="return confirm('Esta Seguro que desea Actualizar Datos del registro?')"href="~/TipoSalud/Agregar/@item.Id_tiposalud" class="btn btn-primary">Actualizar</a>
+                            <a onclick="return confirm('Esta Seguro que desea Actualizar Datos del registro?')" href="~/TipoSalud/Agregar/@item.Id_tiposalud" class="btn btn-primary">Actualizar</a>
 
                         </td>
                     </tr>

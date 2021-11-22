@@ -37,7 +37,7 @@ namespace SistemaVacunas.Controllers
             if (ModelState.IsValid)
             {
                 model.Registrar();
-
+                TempData["AlertMessage"] = "Rol Created Successfully ..!";
                 return Redirect("~/Rol/Index");
             }
             else

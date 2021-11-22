@@ -35,6 +35,7 @@ namespace SistemaVacunas.Controllers
             if (ModelState.IsValid)
             {
                 model.Registrar();
+                TempData["AlertMessage"] = "Centro de Salud Created Successfully ..!";
                 return Redirect("~/Centro/Index");
             }
             else

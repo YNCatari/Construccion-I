@@ -34,6 +34,7 @@ namespace SistemaVacunas.Controllers
             if (ModelState.IsValid)
             {
                 model.Registrar();
+                TempData["AlertMessage"] = "Horario Created Successfully ..!";
                 return Redirect("~/Horario/Index");
             }
             else

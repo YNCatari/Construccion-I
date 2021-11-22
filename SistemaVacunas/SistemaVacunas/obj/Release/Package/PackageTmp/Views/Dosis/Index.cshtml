@@ -17,6 +17,12 @@
     @using (Html.BeginForm("Index", "Dosis", FormMethod.Post))
     {
     }
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div class="alert alert-success">
+            <strong>Success !</strong>@TempData["AlertMessage"]
+        </div>
+    }
     <div class="table-responsive">
         <table id="datatable" class="display" style="width:100%">
             <thead>
@@ -34,22 +40,22 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr class="text-center">
-                    <td>@(item.Id_dosis)</td>
-                    @*<td>@(item.Tipo_Dosis.Descripcion)</td>*@
-                    <td>@(item.Cantidad)</td>
-                    <td>@(item.Observaciones)</td>
-                    <td>@(item.Fecha)</td>
+                    <tr class="text-center">
+                        <td>@(item.Id_dosis)</td>
+                        @*<td>@(item.Tipo_Dosis.Descripcion)</td>*@
+                        <td>@(item.Cantidad)</td>
+                        <td>@(item.Observaciones)</td>
+                        <td>@(item.Fecha)</td>
 
-                    <td>
-                        <a href="#" class="btn btn-danger">@(item.Estado == "A" ? "Activo" : "Inactivo" )</a>
-                        
-                    </td>
-                    <td>
-                        <a onclick="return confirm('Esta Seguro que desea Actualizar Datos del registro?')"href="~/Dosis/Agregar/@item.Id_dosis" class="btn btn-primary">Actualizar</a>
-                        <a onclick="return confirm('Esta Seguro que desea eliminar el registro?')" href="~/Dosis/Eliminar/@item.Id_dosis" class="btn btn-danger">Eliminar</a>
-                    </td>
-                </tr>
+                        <td>
+                            <a href="#" class="btn btn-danger">@(item.Estado == "A" ? "Activo" : "Inactivo" )</a>
+
+                        </td>
+                        <td>
+                            <a onclick="return confirm('Esta Seguro que desea Actualizar Datos del registro?')" href="~/Dosis/Agregar/@item.Id_dosis" class="btn btn-primary">Actualizar</a>
+                            <a onclick="return confirm('Esta Seguro que desea eliminar el registro?')" href="~/Dosis/Eliminar/@item.Id_dosis" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>

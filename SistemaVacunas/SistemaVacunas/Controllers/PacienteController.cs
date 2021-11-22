@@ -34,6 +34,7 @@ namespace SistemaVacunas.Controllers
             if (ModelState.IsValid)
             {
                 model.Registrar();
+                TempData["AlertMessage"] = "Paciente Created Successfully ..!";
                 return Redirect("~/Paciente/Index");
             }
             else

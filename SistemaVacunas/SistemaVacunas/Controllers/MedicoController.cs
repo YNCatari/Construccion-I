@@ -37,6 +37,7 @@ namespace SistemaVacunas.Controllers
             if (ModelState.IsValid)
             {
                 model.Registrar();
+                TempData["AlertMessage"] = "Medico Created Successfully ..!";
                 return Redirect("~/Medico/Index");
             }
             else

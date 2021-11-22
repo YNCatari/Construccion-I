@@ -35,6 +35,7 @@ namespace SistemaVacunas.Controllers
             if (ModelState.IsValid)
             {
                 model.Registrar();
+                TempData["AlertMessage"] = "Tipo Dosis Created Successfully ..!";
                 return Redirect("~/TipoDosis/Index");
             }
             else
