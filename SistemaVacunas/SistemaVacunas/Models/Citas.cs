@@ -5,7 +5,8 @@ namespace SistemaVacunas.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-
+    using System.Data.Entity;
+    using System.Linq;
     public partial class Citas
     {
         [Key]
@@ -45,5 +46,79 @@ namespace SistemaVacunas.Models
         public virtual Paciente Paciente { get; set; }
 
         public virtual Total_Dosis Total_Dosis { get; set; }
+
+
+        //listar Citas
+        public List<Citas> Listar()
+        {
+            var usuarios = new List<Citas>();
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    usuarios = db.Citas.Include("Centro").Include("Medico").Include("Paciente").ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return usuarios;
+        }
+        //guardar Citas
+        public void Registrar()
+        {
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    if (this.Id_citas > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        db.Entry(this).State = EntityState.Added;
+                    }
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        //Confirmar Citas
+
+
+        //Cancelar Citas
+
+
+        //Ver Citas
+
+
+        //Buscar Citas
+        public List<Citas> Buscar(string criterio)
+        {
+            var usuarios = new List<Citas>();
+            try
+            {
+                using (var db = new ModelVacuna())
+                {
+                    usuarios = db.Citas
+                        .Where(x => x.Lugarvacunacion.Contains(criterio) || x.Fecha.Contains(criterio))
+                        .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return usuarios;
+        }
+
+
+
+
     }
 }
