@@ -1,0 +1,64 @@
+﻿@model SistemaVacunas.Models.Tipo_Salud
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Tipo de Centro de Salud
+    </h3>
+    <p class="text-justify">
+
+    </p>
+</div>
+
+<!--CONTENT-->
+<!-- Content here-->
+<div class="container-fluid">
+    @using (Html.BeginForm("Registrar", "TipoSalud", FormMethod.Post, new { id = "frm-productos" }))
+    {
+        @Html.HiddenFor(x => x.Id_tiposalud)
+        <form action="" class="form-neon" autocomplete="off">
+            <fieldset>
+                <legend><i class="fas fa-user"></i> &nbsp; CREANDO NUEVO TIPO DE CENTRO DE SALUD</legend>
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="producto_nombre" class="bmd-label-floating">Nombres:</label>
+                                @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "label label-danger" })
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="producto_Descripcion" class="bmd-label-floating">Descripcion:</label>
+                                @Html.TextBoxFor(x => x.Descripcion, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.Descripcion, null, new { @class = "label label-danger" })
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <label for="producto_estado" class="bmd-label-floating">Estado:</label>
+                            <select name="estado" class="form-control">
+                                <option @(Model.Estado == "A" ? "selected" : "") value="A">Activo</option>
+                                <option @(Model.Estado == "I" ? "selected" : "") value="I">Inactivo</option>
+                            </select>
+                            @Html.ValidationMessageFor(x => x.Estado, null, new { @class = "label label-danger" })
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <br><br><br>
+            <p class="text-center" style="margin-top: 40px;">
+                <button type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
+                &nbsp; &nbsp;
+                <a href="~/TipoSalud" class="btn btn-danger">Cancelar</a>
+            </p>
+        </form>
+    }
+</div>
+
+

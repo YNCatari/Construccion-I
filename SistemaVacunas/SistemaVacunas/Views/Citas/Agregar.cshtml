@@ -1,0 +1,166 @@
+﻿@model SistemaVacunas.Models.Citas
+@{
+    ViewBag.Title = "Agregar";
+    List<SistemaVacunas.Models.Tipo_Dosis> tipodosis = ViewBag.Tipo;
+    List<SistemaVacunas.Models.Centro> centro = ViewBag.Centro;
+    List<SistemaVacunas.Models.Paciente> paciente = ViewBag.Paciente;
+    List<SistemaVacunas.Models.Medico> medico = ViewBag.Medico;
+}
+
+<!-- Page header -->
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Citas
+    </h3>
+    <p class="text-justify">
+
+    </p>
+</div>
+<!--CONTENT-->
+<!-- Content here-->
+<div class="container-fluid">
+    @using (Html.BeginForm("Registrar", "Citas", FormMethod.Post, new { id = "frm-productos" }))
+    {
+        @Html.HiddenFor(x => x.Id_citas)
+        <div><i class="fas fa-user"></i> &nbsp; CREANDO NUEVA CITA</div>
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+
+                    <label for="producto_nombre" class="bmd-label-floating">Lugar de Vacunacion:</label>
+                    @Html.TextBoxFor(x => x.Lugarvacunacion, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Lugarvacunacion, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_email" class="bmd-label-floating">Direccion:</label>
+                    @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Direccion, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_Dni" class="bmd-label-floating">Fecha:</label>
+                    @Html.TextBoxFor(x => x.Fecha, new { @type = "date", @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Fecha, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_Direccion" class="bmd-label-floating">Hora:</label>
+                    <input class="form-control" name="Hora" type="time" id="inputMDEx1 ">
+                    @Html.ValidationMessageFor(x => x.Hora, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                @Html.LabelFor(x => x.Estado)
+                <select name="estado" class="form-control">
+                    <option @(Model.Estado == "A" ? "selected" : "") value="A">Activo</option>
+                    <option @(Model.Estado == "I" ? "selected" : "") value="I">Inactivo</option>
+                </select>
+                @Html.ValidationMessageFor(x => x.Estado, null, new { @class = "label label-danger" })
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="Id_paciente" class="bmd-label-floating">Paciente:</label>
+                    <select name="Id_paciente" class="form-control">
+                        <option @(Model.Id_paciente.Equals("") ? "selected" : "") value="">--Seleccione--</option>
+                        @foreach (var t in paciente)
+                        {
+                            <option @(Model.Id_paciente.Equals(t.Id_paciente) ? "selected" : "")
+                                    value="@t.Id_paciente">
+                                @t.Apellidos, @t.Nombre
+                            </option>
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(x => x.Id_paciente, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="Id_medico" class="bmd-label-floating">Medico:</label>
+                    <select name="Id_medico" class="form-control">
+                        <option @(Model.Id_medico.Equals("") ? "selected" : "") value="">--Seleccione--</option>
+                        @foreach (var t in medico)
+                        {
+                            <option @(Model.Id_medico.Equals(t.Id_medico) ? "selected" : "")
+                                    value="@t.Id_medico">
+                                @t.Apellidos, @t.Nombre
+                            </option>
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(x => x.Id_medico, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="Id_centro" class="bmd-label-floating">Centro:</label>
+                    <select name="Id_centro" class="form-control">
+                        <option @(Model.Id_centro.Equals("") ? "selected" : "") value="">--Seleccione--</option>
+                        @foreach (var t in centro)
+                        {
+                            <option @(Model.Id_centro.Equals(t.Id_centro) ? "selected" : "")
+                                    value="@t.Id_centro">
+                                @t.Nombre
+                            </option>
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(x => x.Id_centro, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="Id_tipodosis" class="bmd-label-floating">Vacuna:</label>
+                    <select name="Id_tipodosis" class="form-control">
+                        <option @(Model.Id_tipodosis.Equals("") ? "selected" : "") value="">--Seleccione--</option>
+                        @foreach (var t in tipodosis)
+                        {
+                            <option @(Model.Id_tipodosis.Equals(t.Id_tipodosis) ? "selected" : "")
+                                    value="@t.Id_tipodosis">
+                                @t.Descripcion
+                            </option>
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(x => x.Id_tipodosis, null, new { @class = "label label-danger" })
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                @Html.LabelFor(x => x.Check1)
+                <select name="Check1" class="form-control">
+                    <option @(Model.Estado == "0" ? "selected" : "") value="0">Confirmada</option>
+                    <option @(Model.Estado == "1" ? "selected" : "") value="1">No Confirmada</option>
+                </select>
+                @Html.ValidationMessageFor(x => x.Check1, null, new { @class = "label label-danger" })
+            </div>
+
+            <div class="col-12 col-md-4">
+                @Html.LabelFor(x => x.Check2)
+                <select name="Check2" class="form-control">
+                    <option @(Model.Estado == "0" ? "selected" : "") value="0">Realizada</option>
+                    <option @(Model.Estado == "1" ? "selected" : "") value="1">No Realizada</option>
+                </select>
+                @Html.ValidationMessageFor(x => x.Check2, null, new { @class = "label label-danger" })
+            </div>
+
+
+
+
+        </div>
+        <p class="text-center" style="margin-top: 40px;">
+
+
+            <button type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
+            &nbsp; &nbsp;
+            <a href="~/Citas" class="btn btn-danger">Cancelar</a>
+        </p>
+    }
+</div>
+
+

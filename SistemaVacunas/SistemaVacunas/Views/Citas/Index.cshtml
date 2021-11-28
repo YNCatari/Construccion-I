@@ -1,0 +1,85 @@
+﻿@model List<SistemaVacunas.Models.Citas>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Page header -->
+<dv class="full-box page-header">
+    <h3 class="text-left">
+       
+        <a href="~/Citas/Index" class="btn btn-success">Proximas Citas</a> 
+        <a href="~/Citas/Index" class="btn btn-success">Proximas Por Confirmar</a> 
+        <a href="~/Citas/Index" class="btn btn-success">Proximas Historial Citas</a> <br />
+        <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Administracion de Citas
+    </h3>
+
+</dv>
+<!--CONTENT-->
+<!-- Content here-->
+<div class="container-fluid">
+    @using (Html.BeginForm("Index", "Citas", FormMethod.Post))
+    {
+    }
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div class="alert alert-success">
+            <strong>Success !</strong>@TempData["AlertMessage"]
+        </div>
+    }
+    <div class="table-responsive">
+        <table id="datatable2" class="display" style="width:100%">
+            <thead>
+                <tr class="text-center">
+
+                    <th>#</th>
+                    <th>LUGAR VACUNACION</th>
+                    <th>DIRECCION</th>
+                    <th>FECHA</th>
+                    <th>HORA</th>
+                    <th>ESTADO</th>
+                    <th>PACIENTE</th>
+                    <th>MEDICO</th>
+                    <th>CENTRO</th>
+                    <th>VACUNA</th>
+                    <th>Check 1</th>
+                    <th>Check 2</th>
+                    <th>OPCIONES</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center">
+                        <td>@(item.Id_citas)</td>
+                        <td>@(item.Lugarvacunacion)</td>
+                        <td>@(item.Direccion)</td>
+                        <td>@(item.Fecha)</td>
+                        <td>@(item.Hora)</td>
+                        <td>
+                            <a href="#" class="btn btn-danger">@(item.Estado == "A" ? "A" : "I" )</a>
+                        </td>
+                        <td>@item.Paciente.Apellidos, @item.Paciente.Nombre</td>
+                        <td>@item.Medico.Apellidos, @item.Medico.Nombre</td>
+                        <td>@(item.Centro.Nombre)</td>
+                        <td>@(item.Tipo_Dosis.Descripcion)</td>
+                        <td>@(item.Check1 == 1 ? "Confirmada" : "No Confirmada")</td>
+                        <td>@(item.Check2 == 1 ? "Realizada" : "No Realizada")</td>
+                        <td>
+                            <a onclick="return confirm('Esta Seguro que desea Actualizar Datos del registro?')" href="~/Citas/Agregar/@item.Id_citas" class="btn btn-primary">Ver</a>
+                            <a onclick="return confirm('Esta Seguro que desea Cancelar el registro?')" href="~/Citas" class="btn btn-danger">Cancelar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+
+
+
+
+
+        </table>
+    </div>
+</div>
+
