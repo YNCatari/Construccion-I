@@ -4,10 +4,11 @@ namespace SistemaVacunas.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    /*TODO: Llamando Las Librerias */
     using System.Data.Entity;
     using System.Data.Entity.Spatial;
     using System.Linq;
-
+    //*TODO: Modelo Usuario  y Atributos */
     public partial class Usuarios
     {
         [Key]
@@ -36,15 +37,11 @@ namespace SistemaVacunas.Models
         [Required]
         [StringLength(10)]
         public string Estado { get; set; }
-
         public int? Id_rol { get; set; }
-
         public virtual Rol Rol { get; set; }
-
-
         ModelVacunas db = new ModelVacunas();
 
-        //login
+        //*TODO: Funcion para Autentificar de acceso del usuario */
         public bool Autenticar()
         {
 
@@ -55,7 +52,7 @@ namespace SistemaVacunas.Models
 
 
         }
-        //obtener datos del login
+        //*TODO: Funcion para Obtener Datos  de acceso del usuario */
         public Usuarios ObtenerDatos(string email)
         {
             var usuario = new Usuarios();
@@ -74,7 +71,8 @@ namespace SistemaVacunas.Models
             }
             return usuario;
         }
-        //listar usuarios
+        /*TODO: Listar todos los Usuarios  Registrados*/
+
         public List<Usuarios> Listar()
         {
             var usuarios = new List<Usuarios>();
@@ -91,7 +89,8 @@ namespace SistemaVacunas.Models
             }
             return usuarios;
         }
-        //guardar usuarios
+        /*TODO: Funcion para Registar y Actualizar Usuario */
+
         public void Registrar()
         {
             try
@@ -114,7 +113,9 @@ namespace SistemaVacunas.Models
                 throw;
             }
         }
-        //Obtener usuarios
+
+
+        /*TODO: Mostrar los datos del usuario segun el ID */
         public Usuarios Obtener(int id)
         {
             var usuarios = new Usuarios();
@@ -133,7 +134,9 @@ namespace SistemaVacunas.Models
             }
             return usuarios;
         }
-        //Buscar usuarios
+
+
+        /*TODO: Buscar los datos del usuario segun el Dni */
         public List<Usuarios> Buscar(string criterio)
         {
             var usuarios = new List<Usuarios>();
@@ -152,10 +155,6 @@ namespace SistemaVacunas.Models
             }
             return usuarios;
         }
-
-
-
-
 
     }
 }

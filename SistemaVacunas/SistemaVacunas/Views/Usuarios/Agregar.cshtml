@@ -1,4 +1,5 @@
-﻿@model SistemaVacunas.Models.Usuarios
+﻿<!-- Listar Modelo Usuario -->
+@model SistemaVacunas.Models.Usuarios
 @{
     ViewBag.Title = "Agregar";
     List<SistemaVacunas.Models.Rol> tipousuario = ViewBag.Tipo;
@@ -15,6 +16,7 @@
 </div>
 <!--CONTENT-->
 <!-- Content here-->
+<!-- Formulario Mantenimiento -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "Usuarios", FormMethod.Post, new { id = "frm-productos" }))
     {

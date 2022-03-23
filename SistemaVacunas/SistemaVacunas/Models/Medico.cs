@@ -137,7 +137,25 @@ namespace SistemaVacunas.Models
             }
             return medicos;
         }
+        //highchart
+        public List<Medico> ObtenerMedico()
+        {
+            var medico = new List<Medico>();
+            try
+            {
+                using (var db = new ModelVacunas())
+                {
+                    medico = db.Medico.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
+            return medico;
+
+        }
 
 
 

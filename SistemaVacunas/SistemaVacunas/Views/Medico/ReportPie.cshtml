@@ -1,0 +1,122 @@
+﻿
+@model List<SistemaVacunas.Models.Medico>
+@{
+    ViewBag.Title = "ReportPie";
+    string contenido = "";
+    string resultado = "";
+    double valor = 0;
+    int total = 0;
+    double porcentaje = 0.0;
+    double totalporcentaje = 0.0;
+}
+
+<div class="full-box page-header">
+    <h3 class="text-left">
+        <i class="fas fa-clipboard-list fa-fw"></i>  REPORTES DE MEDICOS
+    </h3>
+    <p class="text-justify">
+
+    </p>
+</div>
+<table class="text-left" style="width:100%">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Valor</th>
+            <th>Porcentaje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var q in Model)
+        {
+            total += q.Id_medico.ToString().Count();
+        }
+        @foreach (var m in Model)
+        {
+            resultado = m.Nombre;
+            valor = m.Id_medico.ToString().Count();
+            contenido = contenido + "[ '" + resultado + "'," + valor + "],";
+
+            porcentaje = ((valor * 100) / total);
+            totalporcentaje += porcentaje;
+            <tr>
+                <th>@(m.Id_medico)</th>
+                <th>@(m.Nombre)</th>
+                <th>@(m.Apellidos)</th>
+                <th class="text-left">@(m.Id_medico.ToString().Count())</th>
+                <th class="text-left">@Math.Round(@porcentaje, 2)%</th>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+<table class="text-left" style="width:100%">
+    <tbody>
+        <tr>
+            
+            <th class="text-left">Total Medicos</th>
+            <th class="text-left">@total</th>
+            <th class="text-left"></th>
+            <th class="text-left">@totalporcentaje %</th>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+    <p class="text-center">
+        EsSalud - Tacna
+    </p>
+   
+    </p>
+</figure>
+
+<script type="text/javascript">
+    $(function () {
+        $(document).ready(function () {
+           Highcharts.chart('container', {
+    chart: {
+        type: 'pie',
+        options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
+    },
+    title: {
+        text: 'Reporte de Medicos de EsSalud'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.Porcentaje:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            depth: 35,
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }
+    },
+    series: [{
+        type: 'pie',
+        name: 'Porcentaje',
+        data: [@Html.Raw(contenido)]
+    }]
+  });
+        })
+    })
+</script>

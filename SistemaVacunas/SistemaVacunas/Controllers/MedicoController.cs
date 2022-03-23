@@ -51,5 +51,9 @@ namespace SistemaVacunas.Controllers
                 objMed.Listar() :
                 objMed.Buscar(criterio));
         }
+        public ActionResult ReportPie()
+        {
+            return View(objMed.ObtenerMedico());
+        }
     }
 }
