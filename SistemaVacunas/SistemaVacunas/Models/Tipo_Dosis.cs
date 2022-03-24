@@ -19,10 +19,10 @@ namespace SistemaVacunas.Models
 
         [Key]
         public int Id_tipodosis { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar Nombre de  Tipo Dosis")]
         [StringLength(50)]
         public string Nombre { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar Descripcion de Dosis")]
         [StringLength(50)]
         public string Descripcion { get; set; }
         [Required]
