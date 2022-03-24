@@ -1,9 +1,12 @@
-﻿using System;
+﻿/*Autores: YNCatari /PYVargas */
+/*Fecha de Creacion: 27/08/2021-II*/
+/*CU: Usuarios*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-/*TODO: Llamando a la clase */
+/*TODO: Llamando a la clase de  usuario */
 using SistemaVacunas.Models;
 namespace SistemaVacunas.Controllers
 {
