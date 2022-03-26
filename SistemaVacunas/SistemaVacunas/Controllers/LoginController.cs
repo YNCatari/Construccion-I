@@ -35,8 +35,10 @@ namespace SistemaVacunas.Controllers
                 {
                     return Redirect(ReturnUrl);
                 }
+                /*TODO: Si todo esta correcto indexar en Index  Home que es el principal dashboard*/
                 return RedirectToAction("Index", "Home");
             }
+            //*Todo: Mensaje de Alert  */
             TempData["mensaje"] = "El correo electrónico o contraseña que ingresaste no está correcto a una cuenta. Encuentra tu cuenta e inicia sesión.";
 
             return View(usuarios);
@@ -46,12 +48,13 @@ namespace SistemaVacunas.Controllers
 
             return usuarios.Autenticar();
         }
-
+        /*TODO: Metodo de  Cerrar Sesion */
         public ActionResult LogOut()
         {
 
             FormsAuthentication.SignOut();
             Session.Abandon();
+            /*TODO: Si todo esta correcto indexar en Index  Login que  es el acceso a sistema principal */
             return RedirectToAction("Index", "Login");
         }
     }
