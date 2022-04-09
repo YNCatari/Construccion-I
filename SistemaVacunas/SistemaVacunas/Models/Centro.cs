@@ -19,23 +19,23 @@ namespace SistemaVacunas.Models
 
         [Key]
         public int Id_centro { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar nombre de centro salud")]
         [StringLength(50)]
         public string Nombre { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar direccion de centro")]
         [StringLength(50)]
         public string Direccion { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar calle o avenida")]
         [StringLength(50)]
         public string Calle { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar ciudad")]
         [StringLength(50)]
         public string Ciudad { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar distrito")]
         [StringLength(50)]
         public string Distrito { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar codigo postal")]
         [StringLength(50)]
         public string Codigo { get; set; }
 

@@ -50,7 +50,7 @@ namespace SistemaVacunas.Controllers
             {
                 model.Registrar();
                 //*Todo: Mensaje de Alert */
-                TempData["AlertMessage"] = "Medico Creado con éxito ...!";
+                TempData["AlertMessage"] = "Medico ha sido registrado exitosamente!";
                 /*TODO: Si todo esta correcto indexar en Index  Medico*/
                 return Redirect("~/Medico/Index");
             }

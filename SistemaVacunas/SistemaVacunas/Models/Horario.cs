@@ -19,13 +19,13 @@ namespace SistemaVacunas.Models
 
         [Key]
         public int Id_horario { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar hora")]
         [StringLength(50)]
         public string Inicio { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar hora")]
         [StringLength(50)]
         public string Fin { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar descripcion o cargo atencion")]
         [StringLength(100)]
         public string Descripcion { get; set; }
         [Required]

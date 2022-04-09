@@ -241,3 +241,4 @@ C:\Users\yncat\Documents\GitHub\Construccion-I\SistemaVacunas\SistemaVacunas\obj
 C:\Users\yncat\Documents\GitHub\Construccion-I\SistemaVacunas\SistemaVacunas\obj\Debug\SistemaVacunas.csproj.CoreCompileInputs.cache
 C:\Users\yncat\Documents\GitHub\Construccion-I\SistemaVacunas\SistemaVacunas\obj\Debug\SistemaVacunas.dll
 C:\Users\yncat\Documents\GitHub\Construccion-I\SistemaVacunas\SistemaVacunas\obj\Debug\SistemaVacunas.pdb
+C:\Users\yncat\Documents\GitHub\Construccion-I\SistemaVacunas\SistemaVacunas\obj\Debug\SistemaVacunas.csproj.CopyComplete

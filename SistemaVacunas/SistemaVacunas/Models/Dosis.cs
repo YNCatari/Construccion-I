@@ -12,13 +12,13 @@ namespace SistemaVacunas.Models
     {
         [Key]
         public int Id_dosis { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar cantidad vacunas")]
         [StringLength(50)]
         public string Cantidad { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar observaciones o detalles")]
         [StringLength(50)]
         public string Observaciones { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar fecha")]
         [StringLength(50)]
         public string Fecha { get; set; }
         [Required]

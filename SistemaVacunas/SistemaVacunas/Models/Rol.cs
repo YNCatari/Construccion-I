@@ -20,10 +20,10 @@ namespace SistemaVacunas.Models
 
         [Key]
         public int Id_rol { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar un nombre")]
         [StringLength(50)]
         public string Nombre { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar una descripcion")]
         [StringLength(50)]
         public string Descripcion { get; set; }
         [Required]

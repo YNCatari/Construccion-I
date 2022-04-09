@@ -16,23 +16,23 @@ namespace SistemaVacunas.Models
     {
         [Key]
         public int Id_usuario { get; set; }
-        [Required(ErrorMessage = "Debe ingresar un nombre")]
+        [Required(ErrorMessage = "Debe ingresar nombre")]
         [StringLength(50)]
         public string Nombre { get; set; }
-        [Required(ErrorMessage = "Debe ingresar un Apellidos")]
+        [Required(ErrorMessage = "Debe ingresar apellidos")]
         [StringLength(50)]
         public string Apellidos { get; set; }
-        [Required(ErrorMessage = "Debe ingresar un DNI")]
+        [Required(ErrorMessage = "Debe ingresar un dni")]
         [StringLength(50)]
         public string Dni { get; set; }
-        [Required(ErrorMessage = "Debe ingresar una Direccion")]
+        [Required(ErrorMessage = "Debe ingresar  direccion")]
         [StringLength(50)]
         public string Direccion { get; set; }
-        [Required(ErrorMessage = "Debe ingresar un Numero Telefonico")]
+        [Required(ErrorMessage = "Debe ingresar telefono")]
         [StringLength(9)]
         public string Telefono { get; set; }
-        [Display(Name = "Correo electrónico")]
-        [Required(ErrorMessage = "Este campo es requerido.")]
+        [Display(Name = "Correo Electrónico")]
+        [Required(ErrorMessage = "Este Campo es requerido.")]
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*",
             ErrorMessage = "Dirección de Correo electrónico incorrecta.")]
         [StringLength(50, ErrorMessage = "Longitud máxima 100")]

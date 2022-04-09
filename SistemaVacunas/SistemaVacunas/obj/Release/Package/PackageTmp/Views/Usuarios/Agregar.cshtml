@@ -1,4 +1,5 @@
-﻿@model SistemaVacunas.Models.Usuarios
+﻿<!-- Listar Modelo Usuario -->
+@model SistemaVacunas.Models.Usuarios
 @{
     ViewBag.Title = "Agregar";
     List<SistemaVacunas.Models.Rol> tipousuario = ViewBag.Tipo;
@@ -15,9 +16,11 @@
 </div>
 <!--CONTENT-->
 <!-- Content here-->
+<!-- Formulario Mantenimiento -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "Usuarios", FormMethod.Post, new { id = "frm-productos" }))
     {
+        @Html.AntiForgeryToken()
         @Html.HiddenFor(x => x.Id_usuario)
         <div><i class="fas fa-user"></i> &nbsp; CREANDO NUEVO USUARIO</div>
         <div class="row">
@@ -60,7 +63,7 @@
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="producto_email" class="bmd-label-floating">Email:</label>
-                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control", autofocus = "autofocus" })
                     @Html.ValidationMessageFor(x => x.Email, null, new { @class = "label label-danger" })
                 </div>
             </div>
@@ -102,7 +105,7 @@
         <p class="text-center" style="margin-top: 40px;">
 
 
-            <button onclick="return confirm('Esta Seguro que desea Registrar Datos del registro?')" type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
+            <button  type="submit" class="btn btn-primary"><i class="far fa-save"></i> &nbsp; Registrar</button>
             &nbsp; &nbsp;
             <a href="~/Usuarios" class="btn btn-danger">Cancelar</a>
         </p>

@@ -46,7 +46,7 @@ namespace SistemaVacunas.Controllers
             {
                 model.Registrar();
                 //*Todo: Mensaje de Alert */
-                TempData["AlertMessage"] = "Rol Creado con éxito ...!";
+                TempData["AlertMessage"] = "Rol ha sido registrado exitosamente!";
                 /*TODO: Si todo esta correcto indexar en Index  Rol*/
                 return Redirect("~/Rol/Index");
             }

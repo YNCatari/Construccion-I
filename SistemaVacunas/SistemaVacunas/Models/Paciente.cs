@@ -19,29 +19,36 @@ namespace SistemaVacunas.Models
 
         [Key]
         public int Id_paciente { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar un dni")]
         [StringLength(8)]
         public string Dni { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar nombres")]
         [StringLength(50)]
         public string Nombre { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar apellidos")]
         [StringLength(50)]
         public string Apellidos { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar direccion")]
         [StringLength(50)]
         public string Direccion { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar telefono / movil")]
         [StringLength(9)]
         public string Telefono { get; set; }
         [Required]
         [StringLength(50)]
         public string Sexo { get; set; }
-        [Required]
-        [StringLength(50)]
+        [Display(Name = "Correo electrónico")]
+        [Required(ErrorMessage = "Este campo es requerido.")]
+        [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*",
+            ErrorMessage = "Dirección de Correo electrónico incorrecta.")]
+        [StringLength(50, ErrorMessage = "Longitud máxima 100")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
-        [Required]
-        [StringLength(8)]
+        [Display(Name = "Contraseña")]
+        [Required(ErrorMessage = "Este campo es requerido.")]
+        [StringLength(8, ErrorMessage = "Longitud entre 6 y 15 caracteres.",
+                      MinimumLength = 6)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
         [Required]
         [StringLength(10)]

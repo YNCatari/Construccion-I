@@ -45,7 +45,7 @@ namespace SistemaVacunas.Controllers
             {
                 model.Registrar();
                 //*Todo: Mensaje de Alert */
-                TempData["AlertMessage"] = "Horario Creado con éxito ...!";
+                TempData["AlertMessage"] = "Horario ha sido registrado exitosamente!";
                 /*TODO: Si todo esta correcto indexar en Index  Horario*/
                 return Redirect("~/Horario/Index");
             }

@@ -48,7 +48,7 @@ namespace SistemaVacunas.Controllers
             {
                 model.Registrar();
                 //*Todo: Mensaje de Alert */
-                TempData["AlertMessage"] = "Centro de Salud  Creado con éxito ...!";
+                TempData["AlertMessage"] = "Centro de Salud ha sido registrado exitosamente!";
                 /*TODO: Si todo esta correcto indexar en Index  Centro*/
                 return Redirect("~/Centro/Index");
             }

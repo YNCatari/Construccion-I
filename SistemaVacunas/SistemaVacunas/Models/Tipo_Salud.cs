@@ -18,10 +18,10 @@ namespace SistemaVacunas.Models
 
         [Key]
         public int Id_tiposalud { get; set; }
-        [Required(ErrorMessage = "Debe ingresar Nombre de un Centro Salud")]
+        [Required(ErrorMessage = "Debe ingresar nombre de un centro salud")]
         [StringLength(50)]
         public string Nombre { get; set; }
-        [Required(ErrorMessage = "Debe ingresar la Descripcion")]
+        [Required(ErrorMessage = "Debe ingresar la descripcion")]
         [StringLength(50)]
         public string Descripcion { get; set; }
         [Required]

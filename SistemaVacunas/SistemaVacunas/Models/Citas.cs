@@ -12,16 +12,16 @@ namespace SistemaVacunas.Models
     {
         [Key]
         public int Id_citas { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar lugar de vacunacion")]
         [StringLength(50)]
         public string Lugarvacunacion { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar direccion de vacunacion")]
         [StringLength(50)]
         public string Direccion { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar fecha")]
         [StringLength(10)]
         public string Fecha { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Debe ingresar hora")]
         [StringLength(10)]
         public string Hora { get; set; }
         [Required]

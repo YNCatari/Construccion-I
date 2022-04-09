@@ -54,7 +54,7 @@ namespace SistemaVacunas.Controllers
             {
                 model.Registrar();
                 //*Todo: Mensaje de Alert */
-                TempData["AlertMessage"] = "Cita Creado con éxito ...!";
+                TempData["AlertMessage"] = "Cita ha sido registrado exitosamente!";
                 /*TODO: Si todo esta correcto indexar en Index  Citas*/
                 return Redirect("~/Citas/Index");
             }
