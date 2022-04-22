@@ -62,7 +62,8 @@ namespace SistemaVacunas.Models
 
 
         }
-        //*TODO: Funcion para Obtener Datos  de acceso del usuario */
+
+        //Obtener email de confirmacion
         public Usuarios ObtenerDatos(string email)
         {
             var usuario = new Usuarios();
@@ -81,8 +82,8 @@ namespace SistemaVacunas.Models
             }
             return usuario;
         }
-        /*TODO: Listar todos los Usuarios  Registrados*/
-
+        
+        //Listar Usuarios
         public List<Usuarios> Listar()
         {
             var usuarios = new List<Usuarios>();
@@ -99,8 +100,8 @@ namespace SistemaVacunas.Models
             }
             return usuarios;
         }
-        /*TODO: Funcion para Registar y Actualizar Usuario */
-
+        
+        //Registrar Usuarios
         public void Registrar()
         {
             try
@@ -125,7 +126,7 @@ namespace SistemaVacunas.Models
         }
 
 
-        /*TODO: Mostrar los datos del usuario segun el ID */
+        //Obtener Usuarios
         public Usuarios Obtener(int id)
         {
             var usuarios = new Usuarios();
@@ -146,7 +147,7 @@ namespace SistemaVacunas.Models
         }
 
 
-        /*TODO: Buscar los datos del usuario segun el Dni */
+        //Buscar Usuarios
         public List<Usuarios> Buscar(string criterio)
         {
             var usuarios = new List<Usuarios>();

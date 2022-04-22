@@ -35,6 +35,7 @@ namespace SistemaVacunas.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Dosis> Dosis { get; set; }
 
+        //Listar Tipo Dosis
         public List<Tipo_Dosis> Listar()
         {
             var rol = new List<Tipo_Dosis>();
@@ -51,6 +52,7 @@ namespace SistemaVacunas.Models
             }
             return rol;
         }
+        //Obtener Tipo Dosis
         public Tipo_Dosis Obtener(int id)
         {
             var rol = new Tipo_Dosis();
@@ -69,6 +71,7 @@ namespace SistemaVacunas.Models
             }
             return rol;
         }
+        //Buscar Tipo Dosis
         public List<Tipo_Dosis> Buscar(string criterio)
         {
             var rol = new List<Tipo_Dosis>();
@@ -90,6 +93,7 @@ namespace SistemaVacunas.Models
             }
             return rol;
         }
+        //Registrar Dosis
         public void Registrar()
         {
             try

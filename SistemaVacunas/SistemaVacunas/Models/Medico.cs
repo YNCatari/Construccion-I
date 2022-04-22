@@ -83,7 +83,7 @@ namespace SistemaVacunas.Models
             }
             return medicos;
         }
-        //guardar medico
+        //Registrar medico
         public void Registrar()
         {
             try

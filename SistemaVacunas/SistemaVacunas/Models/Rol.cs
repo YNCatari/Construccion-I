@@ -36,6 +36,7 @@ namespace SistemaVacunas.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuarios> Usuarios { get; set; }
 
+        //Listar Rol
         public List<Rol> Listar()
         {
             var rol = new List<Rol>();
@@ -52,6 +53,7 @@ namespace SistemaVacunas.Models
             }
             return rol;
         }
+        //Obtener Rol
         public Rol Obtener(int id)
         {
             var rol = new Rol();
@@ -70,6 +72,7 @@ namespace SistemaVacunas.Models
             }
             return rol;
         }
+        //Buscar Rol
         public List<Rol> Buscar(string criterio)
         {
             var rol = new List<Rol>();
@@ -91,6 +94,7 @@ namespace SistemaVacunas.Models
             }
             return rol;
         }
+        //Registrar Rol
         public void Registrar()
         {
             try

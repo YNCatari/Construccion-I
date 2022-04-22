@@ -57,6 +57,8 @@ namespace SistemaVacunas.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Citas> Citas { get; set; }
 
+        //Listar Paciente
+
         public List<Paciente> Listar()
         {
             var pacientes = new List<Paciente>();
@@ -73,6 +75,7 @@ namespace SistemaVacunas.Models
             }
             return pacientes;
         }
+        //Obtener Paciente
         public Paciente Obtener(int id)
         {
             var pacientes = new Paciente();
@@ -91,6 +94,7 @@ namespace SistemaVacunas.Models
             }
             return pacientes;
         }
+        //Buscar Paciente
         public List<Paciente> Buscar(string criterio)
         {
             var pacientes = new List<Paciente>();
@@ -112,6 +116,7 @@ namespace SistemaVacunas.Models
             }
             return pacientes;
         }
+        //Registrar Paciente
         public void Registrar()
         {
             try

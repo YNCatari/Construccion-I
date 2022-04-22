@@ -30,6 +30,7 @@ namespace SistemaVacunas.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Centro> Centro { get; set; }
+        //Listar Tipo Salud
         public List<Tipo_Salud> Listar()
         {
             var tipo = new List<Tipo_Salud>();
@@ -46,6 +47,7 @@ namespace SistemaVacunas.Models
             }
             return tipo;
         }
+        //Obtener Tipo Salud
         public Tipo_Salud Obtener(int id)
         {
             var tipo = new Tipo_Salud();
@@ -64,6 +66,7 @@ namespace SistemaVacunas.Models
             }
             return tipo;
         }
+        //Buscar Tipo Salud
         public List<Tipo_Salud> Buscar(string criterio)
         {
             var tipo = new List<Tipo_Salud>();
@@ -85,6 +88,7 @@ namespace SistemaVacunas.Models
             }
             return tipo;
         }
+        //Registrar Tipo Salud
         public void Registrar()
         {
             try

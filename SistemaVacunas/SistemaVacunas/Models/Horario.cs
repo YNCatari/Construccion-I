@@ -35,7 +35,7 @@ namespace SistemaVacunas.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Medico> Medico { get; set; }
 
-
+        //Listar Horario
         public List<Horario> Listar()
         {
             var horarios = new List<Horario>();
@@ -52,6 +52,7 @@ namespace SistemaVacunas.Models
             }
             return horarios;
         }
+        //Obtener Horario
         public Horario Obtener(int id)
         {
             var horarios = new Horario();
@@ -70,6 +71,7 @@ namespace SistemaVacunas.Models
             }
             return horarios;
         }
+        //Buscar Horario
         public List<Horario> Buscar(string criterio)
         {
             var horarios = new List<Horario>();
@@ -91,6 +93,7 @@ namespace SistemaVacunas.Models
             }
             return horarios;
         }
+        //Registrar Horario
         public void Registrar()
         {
             try
