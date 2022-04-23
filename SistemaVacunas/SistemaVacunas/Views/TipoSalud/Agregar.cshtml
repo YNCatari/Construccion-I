@@ -1,9 +1,10 @@
-﻿@model SistemaVacunas.Models.Tipo_Salud
+﻿<!-- Listar Modelo Centro -->
+@model SistemaVacunas.Models.Tipo_Salud
 @{
     ViewBag.Title = "Agregar";
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Tipo de Centro de Salud
@@ -13,8 +14,8 @@
     </p>
 </div>
 
-<!--CONTENT-->
-<!-- Content here-->
+<!-- Contenido -->
+<!-- Formulario Mantenimiento Tipo Salud -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "TipoSalud", FormMethod.Post, new { id = "frm-productos" }))
     {

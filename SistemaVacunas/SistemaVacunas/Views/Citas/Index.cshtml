@@ -1,21 +1,22 @@
-﻿@model List<SistemaVacunas.Models.Citas>
+﻿<!-- Listar Modelo Citas -->
+@model List<SistemaVacunas.Models.Citas>
 @{
     ViewBag.Title = "Index";
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <dv class="full-box page-header">
     <h3 class="text-left">
-       
-        <a href="~/Citas/Index" class="btn btn-success">Proximas Citas</a> 
-        <a href="~/Citas/Index" class="btn btn-success">Proximas Por Confirmar</a> 
+
+        <a href="~/Citas/Index" class="btn btn-success">Proximas Citas</a>
+        <a href="~/Citas/Index" class="btn btn-success">Proximas Por Confirmar</a>
         <a href="~/Citas/Index" class="btn btn-success">Proximas Historial Citas</a> <br />
         <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Administracion de Citas
     </h3>
 
 </dv>
-<!--CONTENT-->
-<!-- Content here-->
+<!--Contenido-->
+<!-- Tabla de Citas-->
 <div class="container-fluid">
     @using (Html.BeginForm("Index", "Citas", FormMethod.Post))
     {

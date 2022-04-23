@@ -5,7 +5,7 @@
     List<SistemaVacunas.Models.Rol> tipousuario = ViewBag.Tipo;
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Usuarios
@@ -14,9 +14,8 @@
 
     </p>
 </div>
-<!--CONTENT-->
-<!-- Content here-->
-<!-- Formulario Mantenimiento -->
+<!--Contenido-->
+<!-- Formulario Mantenimiento Usuario -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "Usuarios", FormMethod.Post, new { id = "frm-productos" }))
     {

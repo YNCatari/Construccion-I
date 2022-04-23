@@ -1,9 +1,10 @@
-﻿@model SistemaVacunas.Models.Tipo_Dosis
+﻿<!-- Listar Modelo Tipo Dosis -->
+@model SistemaVacunas.Models.Tipo_Dosis
 @{
     ViewBag.Title = "Agregar";
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Pacientes
@@ -13,8 +14,8 @@
     </p>
 </div>
 
-<!--CONTENT-->
-<!-- Content here-->
+<!-- Contenido -->
+<!-- Formulario Mantenimiento Tipo Dosis -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "TipoDosis", FormMethod.Post, new { id = "frm-productos" }))
     {

@@ -1,9 +1,10 @@
-﻿@model SistemaVacunas.Models.Horario
+﻿<!-- Listar Modelo Horario -->
+@model SistemaVacunas.Models.Horario
 @{
     ViewBag.Title = "Agregar";
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Horarios
@@ -13,8 +14,8 @@
     </p>
 </div>
 
-<!--CONTENT-->
-<!-- Content here-->
+<!-- Contenido -->
+<!-- Formulario Mantenimiento Horario -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "Horario", FormMethod.Post, new { id = "frm-productos" }))
     {
@@ -25,13 +26,13 @@
                 <div class="container-fluid">
                     <div class="row">
 
-                       
+
 
 
                         <div class="col-12 col-md-6">
                             <div class="form-group">
                                 <label for="producto_nombre" class="bmd-label-floating">Hora Inicio:</label>
-                            <input class="form-control" name="Inicio" type="time" id="inputMDEx1 ">
+                                <input class="form-control" name="Inicio" type="time" id="inputMDEx1 ">
                                 @Html.ValidationMessageFor(x => x.Inicio, null, new { @class = "label label-danger" })
                             </div>
                         </div>

@@ -1,9 +1,10 @@
-﻿@model SistemaVacunas.Models.Rol
+﻿<!-- Listar Modelo Rol -->
+@model SistemaVacunas.Models.Rol
 @{
     ViewBag.Title = "Agregar";
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Roles
@@ -12,8 +13,8 @@
 
     </p>
 </div>
-<!--CONTENT-->
-<!-- Content here-->
+<!-- Contenido -->
+<!-- Formulario Mantenimiento Rol -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "Rol", FormMethod.Post, new { id = "frm-productos" }))
     {

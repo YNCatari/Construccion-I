@@ -1,4 +1,5 @@
-﻿@model SistemaVacunas.Models.Citas
+﻿<!-- Listar Modelo Citas -->
+@model SistemaVacunas.Models.Citas
 @{
     ViewBag.Title = "Agregar";
     List<SistemaVacunas.Models.Tipo_Dosis> tipodosis = ViewBag.Tipo;
@@ -7,7 +8,7 @@
     List<SistemaVacunas.Models.Medico> medico = ViewBag.Medico;
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Citas
@@ -16,8 +17,8 @@
 
     </p>
 </div>
-<!--CONTENT-->
-<!-- Content here-->
+<!-- Contenido -->
+<!-- Formulario Mantenimiento Citas -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "Citas", FormMethod.Post, new { id = "frm-productos" }))
     {

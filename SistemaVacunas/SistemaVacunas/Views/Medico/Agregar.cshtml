@@ -1,11 +1,12 @@
-﻿@model SistemaVacunas.Models.Medico
+﻿<!-- Listar Modelo Centro -->
+@model SistemaVacunas.Models.Medico
 @{
     ViewBag.Title = "Agregar";
     List<SistemaVacunas.Models.Rol> tipousuario = ViewBag.Tipo;
     List<SistemaVacunas.Models.Horario> tipohorario = ViewBag.Horario;
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Medicos
@@ -14,8 +15,8 @@
 
     </p>
 </div>
-<!--CONTENT-->
-<!-- Content here-->
+<!-- Contenido -->
+<!-- Formulario Mantenimiento Medico -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "Medico", FormMethod.Post, new { id = "frm-productos" }))
     {
@@ -126,12 +127,12 @@
 
 
             @*<div class="col-12 col-md-6">
-            <div class="form-group">
-                <label for="medico_horario" class="bmd-label-floating">HORARIO:</label>
-                @Html.TextBoxFor(x => x.id_horario, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => x.id_horario, null, new { @class = "label label-danger" })
-            </div>
-        </div>*@
+                    <div class="form-group">
+                        <label for="medico_horario" class="bmd-label-floating">HORARIO:</label>
+                        @Html.TextBoxFor(x => x.id_horario, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.id_horario, null, new { @class = "label label-danger" })
+                    </div>
+                </div>*@
 
 
         </div>

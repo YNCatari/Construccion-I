@@ -1,9 +1,10 @@
-﻿@model List<SistemaVacunas.Models.Medico>
+﻿<!-- Listar Modelo Medico -->
+@model List<SistemaVacunas.Models.Medico>
 @{
     ViewBag.Title = "Index";
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <dv class="full-box page-header">
     <h3 class="text-left">
         <a href="~/Medico/Agregar/" class="btn btn-success">Nuevo Registro</a> <br />
@@ -11,8 +12,8 @@
     </h3>
 
 </dv>
-<!--CONTENT-->
-<!-- Content here-->
+<!--Contenido-->
+<!-- Tabla de Medicos-->
 <div class="container-fluid">
     @using (Html.BeginForm("Index", "Medico", FormMethod.Post))
     {

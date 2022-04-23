@@ -1,10 +1,11 @@
-﻿@model SistemaVacunas.Models.Centro
+﻿<!-- Listar Modelo Centro -->
+@model SistemaVacunas.Models.Centro
 @{
     ViewBag.Title = "Agregar";
     List<SistemaVacunas.Models.Tipo_Salud> tipousuario = ViewBag.Tipo;
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Centro de Salud
@@ -13,8 +14,8 @@
 
     </p>
 </div>
-<!--CONTENT-->
-<!-- Content here-->
+<!--Contenido-->
+<!-- Formulario Mantenimiento Centro -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "Centro", FormMethod.Post, new { id = "frm-productos" }))
     {
@@ -81,7 +82,7 @@
                 </div>
             </div>
 
-           
+
         </div>
         <p class="text-center" style="margin-top: 40px;">
 
