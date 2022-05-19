@@ -46,7 +46,7 @@
                         <div class="col-12 col-md-6">
                             <div class="form-group">
                                 <label for="producto_Descripcion" class="bmd-label-floating">Descripcion:</label>
-                                @Html.TextBoxFor(x => x.Descripcion, new { @class = "form-control" })
+                                @Html.TextAreaFor(x => x.Descripcion, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(x => x.Descripcion, null, new { @class = "label label-danger" })
                             </div>
                         </div>

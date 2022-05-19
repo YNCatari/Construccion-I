@@ -17,13 +17,13 @@ namespace SistemaVacunas.Models
         [Key]
         public int Id_usuario { get; set; }
         [Required(ErrorMessage = "Debe ingresar nombre")]
-        [StringLength(50)]
+        [StringLength(10)]
         public string Nombre { get; set; }
         [Required(ErrorMessage = "Debe ingresar apellidos")]
-        [StringLength(50)]
+        [StringLength(20)]
         public string Apellidos { get; set; }
         [Required(ErrorMessage = "Debe ingresar un dni")]
-        [StringLength(50)]
+        [StringLength(8)]
         public string Dni { get; set; }
         [Required(ErrorMessage = "Debe ingresar  direccion")]
         [StringLength(50)]
@@ -40,8 +40,8 @@ namespace SistemaVacunas.Models
         public string Email { get; set; }
         [Display(Name = "Contraseña")]
         [Required(ErrorMessage = "Este campo es requerido.")]
-        [StringLength(8, ErrorMessage = "Longitud entre 6 y 15 caracteres.",
-                      MinimumLength = 6)]
+        [StringLength(8, ErrorMessage = "Longitud entre 1 y 6 caracteres.",
+                      MinimumLength = 1)]
         [DataType(DataType.Password)]
         public string Password { get; set; }
         [Required]

@@ -1,9 +1,10 @@
-﻿@model List<SistemaVacunas.Models.Centro>
+﻿<!-- Listar Modelo Centro -->
+@model List<SistemaVacunas.Models.Centro>
 @{
     ViewBag.Title = "Index";
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <dv class="full-box page-header">
     <h3 class="text-left">
         <a href="~/Centro/Agregar/" class="btn btn-success">Nuevo Registro</a> <br />
@@ -11,8 +12,8 @@
     </h3>
 
 </dv>
-<!--CONTENT-->
-<!-- Content here-->
+<!--Contenido-->
+<!-- Tabla de Centros-->
 <div class="container-fluid">
     @using (Html.BeginForm("Index", "Centro", FormMethod.Post))
     {
@@ -23,7 +24,7 @@
             <strong>Success !</strong>@TempData["AlertMessage"]
         </div>
     }
-    <div class="table-responsive">
+    <div class="table-wrapper">
         <table id="datatable" class="display" style="width:100%">
             <thead>
                 <tr class="text-center">

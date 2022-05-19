@@ -3,98 +3,125 @@
     ViewBag.Title = "Index";
 }
 
+
+<input type="checkbox" id="cerrar">
+<label for="cerrar" id="btn-cerrar">X</label>
+<div class="modal">
+    <div class="contenido">
+        <br>
+        <center> <h4>Bienvenidos a  Sistema de Gestión de Vacunas</h4>
+            <p>Comunicado Importante</p>
+            <p>
+                Estimado usuario:
+                El sistema de Gestión de Vacunas se encarga de registrar requerimientos en el Sistema de Gestión de Vacunas de EsSalud, para absolver cualquier duda o consulte sobre la Administacion del Sistema debe dirigirse a revisar  primero a opcion Descargar el Manual de Usuario, publicados en la web .
+            </p>
+            <img src="~/assets/images/home.png" alt="">
+            <div class="row" style="margin: auto; height: 100%">
+                <div class="col-lg-9"><div class="item-dj__title">Manual de Usuarios</div></div>
+                <div class="text-center col-lg-3">
+                    <a href="~/assets/doc/formato01.pdf" target="_blank" class="item-dj__download">
+                        <span class="item-dj__download-text">Descargar</span>
+                    </a>
+                </div>
+            </div></center>
+</div>
+</div>
 <p>Bienvenidos a EsSalud   Sistema de Gestión de Vacunas</p>
 <center><img src="~/assets/images/home.png" /></center>
+
+
+
+
 @*<main class="content">
-    <div class="container-fluid p-0">
-        <div class="row">
-            <div class="col-12 col-md-6 col-xl d-flex">
-                <div class="card flex-fill">
-                    <div class="card-body py-4">
-                        <div class="float-end text-success">
-                            1%
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12 col-md-6 col-xl d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="float-end text-success">
+                                1%
+                            </div>
+                            <h4 class="mb-2">Usuarios</h4>
+                            <div class="mb-1">
+                                <strong>
+                                    1
+                                </strong>
+
+                            </div>
+
                         </div>
-                        <h4 class="mb-2">Usuarios</h4>
-                        <div class="mb-1">
-                            <strong>
-                                1
-                            </strong>
-                           
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="float-end text-success">
+                                1%
+                            </div>
+                            <h4 class="mb-2">Medicos</h4>
+                            <div class="mb-1">
+                                <strong>
+                                    1
+                                </strong>
+
+                            </div>
+
                         </div>
-                      
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="float-end text-danger">
+                                1%
+                            </div>
+                            <h4 class="mb-2">Citas</h4>
+                            <div class="mb-1">
+                                <strong>
+                                    1
+                                </strong>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="float-end text-success">
+                                1%
+                            </div>
+                            <h4 class="mb-2">Pacientes</h4>
+                            <div class="mb-1">
+                                <strong>
+                                    1
+                                </strong>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl d-none d-xxl-flex">
+                    <div class="card flex-fill">
+                        <div class="card-body py-4">
+                            <div class="float-end text-danger">
+                                2%
+                            </div>
+                            <h4 class="mb-2">Reportes</h4>
+                            <div class="mb-1">
+                                <strong>
+                                    3
+                                </strong>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-xl d-flex">
-                <div class="card flex-fill">
-                    <div class="card-body py-4">
-                        <div class="float-end text-success">
-                            1%
-                        </div>
-                        <h4 class="mb-2">Medicos</h4>
-                        <div class="mb-1">
-                            <strong>
-                                1
-                            </strong>
-                          
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl d-flex">
-                <div class="card flex-fill">
-                    <div class="card-body py-4">
-                        <div class="float-end text-danger">
-                            1%
-                        </div>
-                        <h4 class="mb-2">Citas</h4>
-                        <div class="mb-1">
-                            <strong>
-                                1
-                            </strong>
-                          
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl d-flex">
-                <div class="card flex-fill">
-                    <div class="card-body py-4">
-                        <div class="float-end text-success">
-                            1%
-                        </div>
-                        <h4 class="mb-2">Pacientes</h4>
-                        <div class="mb-1">
-                            <strong>
-                                1
-                            </strong>
-                          
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl d-none d-xxl-flex">
-                <div class="card flex-fill">
-                    <div class="card-body py-4">
-                        <div class="float-end text-danger">
-                            2%
-                        </div>
-                        <h4 class="mb-2">Reportes</h4>
-                        <div class="mb-1">
-                            <strong>
-                                3
-                            </strong>
-                           
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
+
         </div>
-        
-    </div>
-</main>*@
+    </main>*@
 

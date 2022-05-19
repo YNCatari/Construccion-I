@@ -1,9 +1,10 @@
-﻿@model List<SistemaVacunas.Models.Rol>
+﻿<!-- Listar Modelo Rol -->
+@model List<SistemaVacunas.Models.Rol>
 @{
     ViewBag.Title = "Index";
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <dv class="full-box page-header">
     <h3 class="text-left">
         <a href="~/Rol/Agregar/" class="btn btn-success">Nuevo Registro</a> <br />
@@ -15,8 +16,8 @@
 
 
 
-<!--CONTENT-->
-<!-- Content here-->
+<!-- Contenido -->
+<!-- Tabla de Centros-->
 <div class="container-fluid">
     @using (Html.BeginForm("Index", "Rol", FormMethod.Post))
     {

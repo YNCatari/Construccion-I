@@ -1,13 +1,14 @@
-﻿@model SistemaVacunas.Models.Dosis
+﻿<!-- Listar Modelo Dosis -->
+@model SistemaVacunas.Models.Dosis
 @{
     ViewBag.Title = "Agregar";
     List<SistemaVacunas.Models.Tipo_Dosis> tipodosis = ViewBag.Tipo;
 
 
-    
+
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <div class="full-box page-header">
     <h3 class="text-left">
         <i class="fas fa-plus fa-fw"></i> &nbsp; Administracion de Dosis
@@ -16,8 +17,8 @@
 
     </p>
 </div>
-<!--CONTENT-->
-<!-- Content here-->
+<!--Contenido-->
+<!-- Formulario Mantenimiento Dosis -->
 <div class="container-fluid">
     @using (Html.BeginForm("Registrar", "Dosis", FormMethod.Post, new { id = "frm-productos" }))
     {
@@ -39,7 +40,7 @@
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="producto_email" class="bmd-label-floating">Observaciones:</label>
-                    @Html.TextBoxFor(x => x.Observaciones, new { @class = "form-control" })
+                    @Html.TextAreaFor(x => x.Observaciones, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.Observaciones, null, new { @class = "label label-danger" })
                 </div>
             </div>

@@ -236,6 +236,11 @@
     <Content Include="assets\js\vendor\typeahead.bundle.min.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Source\css\modal.css" />
+    <Content Include="Source\js\jquery.form.min.js" />
+    <Content Include="Source\js\jquery.min.js" />
+    <Content Include="Source\js\jquery.validate.min.js" />
+    <Content Include="Source\js\jquery.validate.unobtrusive.min.js" />
     <Content Include="Source\css\app.css" />
     <Content Include="Source\css\bootstrap.css" />
     <Content Include="Source\css\bootstrap.min.css" />
@@ -320,6 +325,7 @@
     <Content Include="assets\fonts\unicons.ttf" />
     <Content Include="assets\fonts\unicons.woff" />
     <Content Include="assets\fonts\unicons.woff2" />
+    <Content Include="assets\doc\formato01.pdf" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

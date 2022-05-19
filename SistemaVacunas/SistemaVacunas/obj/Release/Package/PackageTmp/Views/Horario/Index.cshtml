@@ -1,9 +1,10 @@
-﻿@model List<SistemaVacunas.Models.Horario>
+﻿<!-- Listar Modelo Horario -->
+@model List<SistemaVacunas.Models.Horario>
 @{
     ViewBag.Title = "Index";
 }
 
-<!-- Page header -->
+<!-- Cabeza de Pagina -->
 <dv class="full-box page-header">
     <h3 class="text-left">
         <a href="~/Horario/Agregar/" class="btn btn-success">Nuevo Registro</a> <br />
@@ -12,9 +13,8 @@
 
 </dv>
 
-<!--CONTENT-->
-<!-- Content here-->
-<!-- Content here-->
+<!--Contenido-->
+<!-- Tabla de Horario-->
 <div class="container-fluid">
     @using (Html.BeginForm("Index", "Horario", FormMethod.Post))
     {
