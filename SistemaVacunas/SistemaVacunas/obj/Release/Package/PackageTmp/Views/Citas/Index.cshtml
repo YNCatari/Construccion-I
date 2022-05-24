@@ -1,10 +1,9 @@
-﻿<!-- Listar Modelo Citas -->
-@model List<SistemaVacunas.Models.Citas>
+﻿@model List<SistemaVacunas.Models.Citas>
 @{
     ViewBag.Title = "Index";
 }
 
-<!-- Cabeza de Pagina -->
+<!-- Page header -->
 <dv class="full-box page-header">
     <h3 class="text-left">
 
@@ -15,8 +14,8 @@
     </h3>
 
 </dv>
-<!--Contenido-->
-<!-- Tabla de Citas-->
+<!--CONTENT-->
+<!-- Content here-->
 <div class="container-fluid">
     @using (Html.BeginForm("Index", "Citas", FormMethod.Post))
     {
@@ -28,59 +27,59 @@
         </div>
     }
     <div class="table-responsive">
-        <table id="datatable2" class="display" style="width:100%">
-            <thead>
-                <tr class="text-center">
-
-                    <th>#</th>
-                    <th>LUGAR VACUNACION</th>
-                    @*<th>DIRECCION</th>*@
-                    <th>FECHA</th>
-                    @*<th>HORA</th>*@
-                    @*<th>ESTADO</th>*@
-                    <th>PACIENTE</th>
-                    @*<th>MEDICO</th>*@
-                    <th>CENTRO</th>
-                    <th>VACUNA</th>
-                    <th>Check 1</th>
-                    <th>Check 2</th>
-                    <th>OPCIONES</th>
-
-                </tr>
-            </thead>
-
-            <tbody>
-                @foreach (var item in Model)
-                {
+            <table id="datatable2" class="table table-bordered" style="width:100%">
+                <thead style="background-color:darkgoldenrod;color:white">
                     <tr class="text-center">
-                        <td>@(item.Id_citas)</td>
-                        <td>@(item.Lugarvacunacion)</td>
-                        @*<td>@(item.Direccion)</td>*@
-                        <td>@(item.Fecha)</td>
-                        @*<td>@(item.Hora)</td>*@
-                        @*<td>
-                            <a href="#" class="btn btn-danger">@(item.Estado == "A" ? "A" : "I" )</a>
-                        </td>*@
-                        <td>@item.Paciente.Nombre</td>
-                        @*<td>@item.Medico.Apellidos, @item.Medico.Nombre</td>*@
-                        <td>@(item.Centro.Nombre)</td>
-                        <td>@(item.Tipo_Dosis.Descripcion)</td>
-                        <td>@(item.Check1 == 1 ? "Confirmada" : "No Confirmada")</td>
-                        <td>@(item.Check2 == 1 ? "Realizada" : "No Realizada")</td>
-                        <td>
-                            <a onclick="return confirm('Esta Seguro que desea Actualizar Datos del registro?')" href="~/Citas/Agregar/@item.Id_citas" class="btn btn-primary">Ver</a>
-                            <a onclick="return confirm('Esta Seguro que desea Cancelar el registro?')" href="~/Citas" class="btn btn-danger">Cancelar</a>
-                        </td>
+
+                        <th>#</th>
+                        <th>LUGAR VAC</th>
+                        <th>DIRECCION</th>
+                        <th>FECHA</th>
+                        <th>HORA</th>
+                        <th>ESTADO</th>
+                        <th>PACIENTE</th>
+                        <th>MEDICO</th>
+                        <th>CENTRO</th>
+                        <th>VACUNA</th>
+                        <th>Check 1</th>
+                        <th>Check 2</th>
+                        <th>OPCIONES</th>
+
                     </tr>
-                }
-            </tbody>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="text-center">
+                            <td>@(item.Id_citas)</td>
+                            <td>@(item.Lugarvacunacion)</td>
+                            <td>@(item.Direccion)</td>
+                            <td>@(item.Fecha)</td>
+                            <td>@(item.Hora)</td>
+                            <td>
+                                <a href="#" class="btn btn-danger">@(item.Estado == "A" ? "A" : "I" )</a>
+                            </td>
+                            <td>@item.Paciente.Apellidos, @item.Paciente.Nombre</td>
+                            <td>@item.Medico.Apellidos, @item.Medico.Nombre</td>
+                            <td>@(item.Centro.Nombre)</td>
+                            <td>@(item.Tipo_Dosis.Descripcion)</td>
+                            <td>@(item.Check1 == 1 ? "Confirmada" : "No Confirmada")</td>
+                            <td>@(item.Check2 == 1 ? "Realizada" : "No Realizada")</td>
+                            <td>
+                                <a onclick="return confirm('Esta Seguro que desea Actualizar Datos del registro?')" href="~/Citas/Agregar/@item.Id_citas" class="btn btn-primary">Ver</a>
+                                <a onclick="return confirm('Esta Seguro que desea Cancelar el registro?')" href="~/Citas" class="btn btn-danger">Cancelar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
 
 
 
 
 
 
-        </table>
+            </table>
     </div>
 </div>
 

@@ -62,8 +62,8 @@
                         <div class="col-12 col-md-4">
                             @Html.LabelFor(x => x.Sexo)
                             <select name="Sexo" class="form-control">
-                                <option @(Model.Sexo == "M" ? "selected" : "") value="M">Mascolino</option>
-                                <option @(Model.Sexo == "F" ? "selected" : "") value="F">Femenino</option>
+                                <option @(Model.Sexo == "M" ? "selected" : "") value="M">M</option>
+                                <option @(Model.Sexo == "F" ? "selected" : "") value="F">F</option>
                             </select>
                             @Html.ValidationMessageFor(x => x.Sexo, null, new { @class = "label label-danger" })
                         </div>
@@ -77,7 +77,7 @@
                         <div class="col-12 col-md-4">
                             <div class="form-group">
                                 <label for="producto_email" class="bmd-label-floating">Password:</label>
-                                @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                                @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(x => x.Password, null, new { @class = "label label-danger" })
                             </div>
                         </div>

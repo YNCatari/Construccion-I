@@ -12,7 +12,7 @@
 
 <!-- Cabeza de pagina-->
 <div class="full-box page-header">
-    <h3 class="text-left">
+    <h3 class="text-lg-center">
         <i class="fas fa-clipboard-list fa-fw"></i>  REPORTES DE MEDICOS
     </h3>
     <p class="text-justify">
@@ -21,14 +21,13 @@
 </div>
 
 <!--tabla de medicos-->
-<table class="text-left" style="width:100%">
-    <thead>
+<table class="table table-bordered" style="width:100%">
+    <thead style="background-color:darkkhaki;color:white">
         <tr>
             <th>#</th>
-            <th>Nombre</th>
-            <th>Apellidos</th>
+            <th>Medicos</th>
             <th>Valor</th>
-            <th>Porcentaje</th>
+            <th>%</th>
         </tr>
     </thead>
     <tbody>
@@ -46,8 +45,7 @@
             totalporcentaje += porcentaje;
             <tr>
                 <th>@(m.Id_medico)</th>
-                <th>@(m.Nombre)</th>
-                <th>@(m.Apellidos)</th>
+                <th>@(m.Nombre),@(m.Apellidos)</th>
                 <th class="text-left">@(m.Id_medico.ToString().Count())</th>
                 <th class="text-left">@Math.Round(@porcentaje, 2)%</th>
             </tr>
@@ -59,7 +57,7 @@
 
 <!-- Tabla de Total de medicos -->
 <table class="text-left" style="width:100%">
-    <tbody>
+    <thead style="background-color:darkkhaki;color:white">
         <tr>
 
             <th class="text-left">Total Medicos</th>
@@ -67,7 +65,7 @@
             <th class="text-left"></th>
             <th class="text-left">@totalporcentaje %</th>
         </tr>
-    </tbody>
+        </tbody>
 </table>
 <br />
 <br />

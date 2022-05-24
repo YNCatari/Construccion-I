@@ -69,7 +69,7 @@
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="producto_contraseña" class="bmd-label-floating">Contraseña:</label>
-                    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                    @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.Password, null, new { @class = "label label-danger" })
                 </div>
             </div>
