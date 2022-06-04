@@ -487,3 +487,4 @@ F:\Construccion-I\SistemaVacunas\SistemaVacunas\obj\Debug\SistemaVacunas.csproj.
 F:\Construccion-I\SistemaVacunas\SistemaVacunas\obj\Debug\SistemaVacunas.csproj.CopyComplete
 F:\Construccion-I\SistemaVacunas\SistemaVacunas\obj\Debug\SistemaVacunas.dll
 F:\Construccion-I\SistemaVacunas\SistemaVacunas\obj\Debug\SistemaVacunas.pdb
+C:\Users\yncat\OneDrive\Documentos\GitHub\Construccion-I\SistemaVacunas\SistemaVacunas\obj\Debug\SistemaVacunas.csproj.AssemblyReference.cache
