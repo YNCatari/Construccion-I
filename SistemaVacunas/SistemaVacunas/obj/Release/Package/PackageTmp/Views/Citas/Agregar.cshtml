@@ -5,6 +5,7 @@
     List<SistemaVacunas.Models.Centro> centro = ViewBag.Centro;
     List<SistemaVacunas.Models.Paciente> paciente = ViewBag.Paciente;
     List<SistemaVacunas.Models.Medico> medico = ViewBag.Medico;
+    
 }
 
 <!-- Page header -->
@@ -22,24 +23,28 @@
     @using (Html.BeginForm("Registrar", "Citas", FormMethod.Post, new { id = "frm-productos" }))
     {
         @Html.HiddenFor(x => x.Id_citas)
+        @Html.HiddenFor(m => m.Lugarvacunacion, new { Value = "NA" })
+        @Html.HiddenFor(m => m.Direccion, new { Value = "NA" })
+
         <div><i class="fas fa-user"></i> &nbsp; CREANDO NUEVA CITA</div>
         <div class="row">
 
-            <div class="col-12 col-md-6">
-                <div class="form-group">
+            @*<div class="col-12 col-md-6">
+                    <div class="form-group">
 
-                    <label for="producto_nombre" class="bmd-label-floating">Lugar de Vacunacion:</label>
-                    @Html.TextBoxFor(x => x.Lugarvacunacion, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(x => x.Lugarvacunacion, null, new { @class = "label label-danger" })
+                        <label for="producto_nombre" class="bmd-label-floating">Lugar de Vacunacion:</label>
+                        @Html.TextBoxFor(x => x.Lugarvacunacion, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Lugarvacunacion, null, new { @class = "label label-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="form-group">
-                    <label for="producto_email" class="bmd-label-floating">Direccion:</label>
-                    @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(x => x.Direccion, null, new { @class = "label label-danger" })
-                </div>
-            </div>
+                <div class="col-12 col-md-6">
+                    <div class="form-group">
+                        <label for="producto_email" class="bmd-label-floating">Direccion:</label>
+                        @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Direccion, null, new { @class = "label label-danger" })
+                    </div>
+                </div>*@
+
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="producto_Dni" class="bmd-label-floating">Fecha:</label>

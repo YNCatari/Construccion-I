@@ -32,11 +32,11 @@
                     <tr class="text-center">
 
                         <th>#</th>
-                        <th>LUGAR VAC</th>
-                        <th>DIRECCION</th>
+                        @*<th>LUGAR VAC</th>
+                        <th>DIRECCION</th>*@
                         <th>FECHA</th>
-                        <th>HORA</th>
-                        <th>ESTADO</th>
+                        @*<th>HORA</th>
+                        <th>ESTADO</th>*@
                         <th>PACIENTE</th>
                         <th>MEDICO</th>
                         <th>CENTRO</th>
@@ -53,13 +53,13 @@
                     {
                         <tr class="text-center">
                             <td>@(item.Id_citas)</td>
-                            <td>@(item.Lugarvacunacion)</td>
-                            <td>@(item.Direccion)</td>
+                            @*<td>@(item.Lugarvacunacion)</td>
+                            <td>@(item.Direccion)</td>*@
                             <td>@(item.Fecha)</td>
-                            <td>@(item.Hora)</td>
+                            @*<td>@(item.Hora)</td>
                             <td>
-                                <a href="#" class="btn btn-danger">@(item.Estado == "A" ? "A" : "I" )</a>
-                            </td>
+                               @(item.Estado == "A" ? "A" : "I" )
+                            </td>*@
                             <td>@item.Paciente.Apellidos, @item.Paciente.Nombre</td>
                             <td>@item.Medico.Apellidos, @item.Medico.Nombre</td>
                             <td>@(item.Centro.Nombre)</td>
@@ -67,7 +67,7 @@
                             <td>@(item.Check1 == 1 ? "Confirmada" : "No Confirmada")</td>
                             <td>@(item.Check2 == 1 ? "Realizada" : "No Realizada")</td>
                             <td>
-                                <a onclick="return confirm('Esta Seguro que desea Actualizar Datos del registro?')" href="~/Citas/Agregar/@item.Id_citas" class="btn btn-primary">Ver</a>
+                                <a  href="~/Citas/Ver/@item.Id_citas" class="btn btn-primary">Ver</a>
                                 <a onclick="return confirm('Esta Seguro que desea Cancelar el registro?')" href="~/Citas" class="btn btn-danger">Cancelar</a>
                             </td>
                         </tr>

@@ -1,0 +1,52 @@
+﻿@model SistemaVacunas.Models.Citas
+@{
+    ViewBag.Title = "Ver";
+ 
+
+}
+
+
+<nav class="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="~/Citas/Index">Detalle de Informacion de Vacunacion </a></li>
+        <li class="breadcrumb-item active">@Model.Id_paciente</li>
+    </ol>
+</nav>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Paciente</th>
+            <th scope="col">Medico</th>
+            <th scope="col">Centro</th>
+            <th scope="col">Vacuna</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Check</th>
+            <th scope="col">Check</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">@Model.Id_citas</th>
+            <td>@(Model.Fecha)</td>
+            <td>@Model.Hora</td>
+            <td>@Model.Id_paciente</td>
+            <td>@Model.Id_medico.</td>
+            <td>@Model.Id_centro</td>
+            <td>@Model.Id_tipodosis</td>
+            <td>@(Model.Estado=="A" ? "Activo" : "Inactivo")</td>
+            <td>@Model.Check1</td>
+            <td>@Model.Check2</td>
+
+        </tr>
+       
+    </tbody>
+</table>
+
+
+
+
+
