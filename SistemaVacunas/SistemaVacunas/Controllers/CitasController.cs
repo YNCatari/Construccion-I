@@ -32,6 +32,11 @@ namespace SistemaVacunas.Controllers
                 return View(objCitas.Buscar(criterio));
             }
         }
+        public ActionResult Ver(int id)
+        {
+            return View(objCitas.Obtener(id));
+        }
+
         //*Todo: Metodo de Agregar  Citas
         public ActionResult Agregar(int id = 0)
         {
@@ -72,8 +77,7 @@ namespace SistemaVacunas.Controllers
                 objCitas.Listar() :
                 objCitas.Buscar(criterio));
         }
-
-
+        
 
     }
 }

@@ -352,6 +352,7 @@
     <Content Include="Views\Citas\Index.cshtml" />
     <Content Include="Views\Citas\Agregar.cshtml" />
     <Content Include="Views\Medico\ReportPie.cshtml" />
+    <Content Include="Views\Citas\Ver.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
