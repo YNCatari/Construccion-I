@@ -187,8 +187,35 @@
                 <a class="sidebar-toggle d-flex">
                     <i class="hamburger align-self-center"></i>
                 </a>
+                <script type="text/javascript">
+                    var d = new Date();
+                    var dia = new Array(7);
+                    dia[0] = "Domingo";
+                    dia[1] = "Lunes";
+                    dia[2] = "Martes";
+                    dia[3] = "Miercoles";
+                    dia[4] = "Jueves";
+                    dia[5] = "Viernes";
+                    dia[6] = "Sabado";
+                    document.write("Hoy es: " + dia[d.getDay()]);
+                </script>
+                <script type="text/javascript">
+                    
+                    function makeArray() {
+                        for (i = 0; i < makeArray.arguments.length; i++)
+                            this[i + 1] = makeArray.arguments[i];
+                    }
+                    var months = new makeArray('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo',
+                        'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+                    var date = new Date();
+                    var day = date.getDate();
+                    var month = date.getMonth() + 1;
+                    var yy = date.getYear();
+                    var year = (yy < 1000) ? yy + 1900 : yy;
+                    document.write("" + day + " de " + months[month] + " del " + year);
+                   
+                </script>
 
-                
 
                 <div class="navbar-collapse collapse">
                     <ul class="navbar-nav navbar-align">

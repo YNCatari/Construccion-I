@@ -9,7 +9,8 @@
 <div class="modal">
     <div class="contenido">
         <br>
-        <center> <h4>Bienvenidos a  Sistema de Gestión de Vacunas</h4>
+        <center>
+            <h4>Bienvenidos a  Sistema de Gestión de Vacunas</h4>
             <p>Comunicado Importante</p>
             <p>
                 Estimado usuario:
@@ -23,11 +24,27 @@
                         <span class="item-dj__download-text">Descargar</span>
                     </a>
                 </div>
-            </div></center>
-</div>
+            </div>
+        </center>
+    </div>
 </div>
 <p>Bienvenidos a EsSalud   Sistema de Gestión de Vacunas</p>
 <center><img src="~/assets/images/home.png" /></center>
+<center><div id="reloj" style="font-size:30px;"></div></center>
+<script type="text/javascript">
+    function startTime() {
+        today = new Date();
+        h = today.getHours();
+        m = today.getMinutes();
+        s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('reloj').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout('startTime()', 500);
+    }
+    function checkTime(i) { if (i < 10) { i = "0" + i; } return i; }
+    window.onload = function () { startTime(); }
+</script>
 
 
 
