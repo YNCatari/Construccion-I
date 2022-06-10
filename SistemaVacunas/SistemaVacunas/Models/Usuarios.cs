@@ -1,6 +1,6 @@
 /*Autores: YNCatari /PYVargas */
 /*Fecha de Creacion: 27/08/2021-II*/
-/*CU: Usuarios*/
+/*CU: Usuarios - 2*/
 namespace SistemaVacunas.Models
 {
     using System;
@@ -31,14 +31,14 @@ namespace SistemaVacunas.Models
         [Required(ErrorMessage = "Debe ingresar telefono")]
         [StringLength(9)]
         public string Telefono { get; set; }
-        [Display(Name = "Correo Electrónico")]
+        [Display(Name = "Correo Electrï¿½nico")]
         [Required(ErrorMessage = "Este Campo es requerido.")]
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*",
-            ErrorMessage = "Dirección de Correo electrónico incorrecta.")]
-        [StringLength(50, ErrorMessage = "Longitud máxima 100")]
+            ErrorMessage = "Direcciï¿½n de Correo electrï¿½nico incorrecta.")]
+        [StringLength(50, ErrorMessage = "Longitud mï¿½xima 100")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
-        [Display(Name = "Contraseña")]
+        [Display(Name = "Contraseï¿½a")]
         [Required(ErrorMessage = "Este campo es requerido.")]
         [StringLength(8, ErrorMessage = "Longitud entre 1 y 6 caracteres.",
                       MinimumLength = 1)]

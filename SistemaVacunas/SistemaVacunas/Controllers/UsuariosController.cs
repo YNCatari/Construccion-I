@@ -1,6 +1,6 @@
 ﻿/*Autores: YNCatari /PYVargas */
 /*Fecha de Creacion: 27/08/2021-II*/
-/*CU: Usuarios*/
+/*CU: Usuarios - 2*/ 
 using System;
 using System.Collections.Generic;
 using System.Linq;

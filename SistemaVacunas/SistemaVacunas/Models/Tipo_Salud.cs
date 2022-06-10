@@ -1,3 +1,6 @@
+/*Autores: YNCatari /PYVargas */
+/*Fecha de Creacion: 27/08/2021-II*/
+/*CU: tipo Salud(Tipo Centro) - 11*/
 namespace SistemaVacunas.Models
 {
     using System;

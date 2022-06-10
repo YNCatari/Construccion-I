@@ -1,3 +1,6 @@
+/*Autores: YNCatari /PYVargas */
+/*Fecha de Creacion: 27/08/2021-II*/
+/*CU: Tipo Dosis - 8*/
 namespace SistemaVacunas.Models
 {
     using System;

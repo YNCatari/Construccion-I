@@ -1,7 +1,7 @@
-Proyecto Avance :)
+Proyecto 
 https://www.essaluddemo.somee.com/
 
 Desplegado en Servidor Sommee
 
-User:demo@gmail.com
+User:admin@gmail.com
 Password:123456

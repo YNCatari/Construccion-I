@@ -1,3 +1,6 @@
+/*Autores: YNCatari /PYVargas */
+/*Fecha de Creacion: 27/08/2021-II*/
+/*CU: Medicos - 4*/
 namespace SistemaVacunas.Models
 {
     using System;
@@ -34,14 +37,14 @@ namespace SistemaVacunas.Models
         [Required]
         [StringLength(10)]
         public string Sexo { get; set; }
-        [Display(Name = "Correo electrónico")]
+        [Display(Name = "Correo electrï¿½nico")]
         [Required(ErrorMessage = "Este campo es requerido.")]
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*",
-            ErrorMessage = "Dirección de Correo electrónico incorrecta.")]
-        [StringLength(50, ErrorMessage = "Longitud máxima 100")]
+            ErrorMessage = "Direcciï¿½n de Correo electrï¿½nico incorrecta.")]
+        [StringLength(50, ErrorMessage = "Longitud mï¿½xima 100")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
-        [Display(Name = "Contraseña")]
+        [Display(Name = "Contraseï¿½a")]
         [Required(ErrorMessage = "Este campo es requerido.")]
         [StringLength(8, ErrorMessage = "Longitud entre 6 y 15 caracteres.",
                       MinimumLength = 6)]
