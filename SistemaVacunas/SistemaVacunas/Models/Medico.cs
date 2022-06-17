@@ -35,6 +35,7 @@ namespace SistemaVacunas.Models
         [StringLength(9)]
         public string Telefono { get; set; }
         [Required]
+        [RegularExpression("[MmFf]", ErrorMessage = "Solo puede ingresar una M o F")]
         [StringLength(10)]
         public string Sexo { get; set; }
         [Display(Name = "Correo electr�nico")]

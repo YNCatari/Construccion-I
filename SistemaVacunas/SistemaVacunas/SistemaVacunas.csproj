@@ -252,6 +252,7 @@
     <Content Include="Source\js\jquery.validate.js" />
     <Content Include="Source\js\jquery.validate.unobtrusive.js" />
     <Content Include="Source\js\sweetalert.min.js" />
+    <Content Include="Source\js\variable-pie.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -343,6 +344,7 @@
     <Content Include="Views\Citas\Agregar.cshtml" />
     <Content Include="Views\Medico\ReportPie.cshtml" />
     <Content Include="Views\Citas\Ver.cshtml" />
+    <Content Include="Views\Citas\Reportes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

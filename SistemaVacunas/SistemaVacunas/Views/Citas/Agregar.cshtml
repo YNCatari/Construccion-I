@@ -30,20 +30,20 @@
         <div class="row">
 
             @*<div class="col-12 col-md-6">
-                    <div class="form-group">
+            <div class="form-group">
 
-                        <label for="producto_nombre" class="bmd-label-floating">Lugar de Vacunacion:</label>
-                        @Html.TextBoxFor(x => x.Lugarvacunacion, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(x => x.Lugarvacunacion, null, new { @class = "label label-danger" })
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="form-group">
-                        <label for="producto_email" class="bmd-label-floating">Direccion:</label>
-                        @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(x => x.Direccion, null, new { @class = "label label-danger" })
-                    </div>
-                </div>*@
+                <label for="producto_nombre" class="bmd-label-floating">Lugar de Vacunacion:</label>
+                @Html.TextBoxFor(x => x.Lugarvacunacion, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Lugarvacunacion, null, new { @class = "label label-danger" })
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="producto_email" class="bmd-label-floating">Direccion:</label>
+                @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Direccion, null, new { @class = "label label-danger" })
+            </div>
+        </div>*@
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
@@ -59,14 +59,7 @@
                     @Html.ValidationMessageFor(x => x.Hora, null, new { @class = "label label-danger" })
                 </div>
             </div>
-            <div class="col-12 col-md-4">
-                @Html.LabelFor(x => x.Estado)
-                <select name="estado" class="form-control">
-                    <option @(Model.Estado == "A" ? "selected" : "") value="A">Activo</option>
-                    <option @(Model.Estado == "I" ? "selected" : "") value="I">Inactivo</option>
-                </select>
-                @Html.ValidationMessageFor(x => x.Estado, null, new { @class = "label label-danger" })
-            </div>
+
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
@@ -153,7 +146,14 @@
                 </select>
                 @Html.ValidationMessageFor(x => x.Check2, null, new { @class = "label label-danger" })
             </div>
-
+            <div class="col-12 col-md-4">
+                @Html.LabelFor(x => x.Estado)
+                <select name="estado" class="form-control">
+                    <option @(Model.Estado == "A" ? "selected" : "") value="A">Activo</option>
+                    <option @(Model.Estado == "I" ? "selected" : "") value="I">Inactivo</option>
+                </select>
+                @Html.ValidationMessageFor(x => x.Estado, null, new { @class = "label label-danger" })
+            </div>
 
 
 

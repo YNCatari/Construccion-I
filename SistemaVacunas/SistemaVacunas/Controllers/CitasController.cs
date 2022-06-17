@@ -77,7 +77,10 @@ namespace SistemaVacunas.Controllers
                 objCitas.Listar() :
                 objCitas.Buscar(criterio));
         }
-        
+        public ActionResult Reportes()
+        {
+            return View(objCitas.Report());
+        }
 
     }
 }

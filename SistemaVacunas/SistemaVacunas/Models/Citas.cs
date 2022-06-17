@@ -21,24 +21,26 @@ namespace SistemaVacunas.Models
         [Required(ErrorMessage = "Debe ingresar direccion de vacunacion")]
         [StringLength(50)]
         public string Direccion { get; set; }
+
         [Required(ErrorMessage = "Debe ingresar fecha")]
-        [StringLength(10)]
+        [DataType(DataType.Date, ErrorMessage = "No tiene el formato correcto")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy HH:mm:ss}")]
         public string Fecha { get; set; }
+
         [Required(ErrorMessage = "Debe ingresar hora")]
         [StringLength(10)]
         public string Hora { get; set; }
-        [Required]
-        [StringLength(10)]
+        
         public string Estado { get; set; }
-
+        
         public int? Id_paciente { get; set; }
-
+      
         public int? Id_medico { get; set; }
-
+  
         public int? Id_centro { get; set; }
-
+    
         public int? Id_tipodosis { get; set; }
-
+       
         public int? Check1 { get; set; }
 
         public int? Check2 { get; set; }
@@ -137,22 +139,25 @@ namespace SistemaVacunas.Models
             }
         }
 
+        //highchart
+        public List<Citas> Report()
+        {
+            var citas = new List<Citas>();
+            try
+            {
+                using (var db = new ModelVacunas())
+                {
+                    citas = db.Citas.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
+            return citas;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
 
     }
 }
