@@ -99,6 +99,7 @@
     <Content Include="assets\css\app-dark.min.css" />
     <Content Include="assets\css\app.min.css" />
     <Content Include="assets\css\icons.min.css" />
+    <Content Include="assets\css\login.css" />
     <Content Include="assets\css\vendor\32px.png" />
     <Content Include="assets\css\vendor\britecharts.min.css" />
     <Content Include="assets\css\vendor\buttons.bootstrap5.css" />
@@ -125,14 +126,18 @@
     <Content Include="assets\images\bg-pattern.png" />
     <Content Include="assets\images\doc.png" />
     <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\gg.jpg" />
     <Content Include="assets\images\home.png" />
     <Content Include="assets\images\logo-dark.png" />
     <Content Include="assets\images\logo-light.png" />
     <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\rep.png" />
+    <Content Include="assets\images\sica.jpg" />
+    <Content Include="assets\images\sss.jpg" />
     <Content Include="assets\images\users\avatar-1.jpg" />
     <Content Include="assets\images\usuario.png" />
     <Content Include="assets\images\vac.png" />
+    <Content Include="assets\images\vaccine.jpg" />
     <Content Include="assets\js\app.min.js" />
     <Content Include="assets\js\pages\demo.apex-area.js" />
     <Content Include="assets\js\pages\demo.apex-bar.js" />
@@ -223,6 +228,7 @@
     <Content Include="assets\js\vendor\responsive.bootstrap5.min.js" />
     <Content Include="assets\js\vendor\simplemde.min.js" />
     <Content Include="assets\js\vendor\typeahead.bundle.min.js" />
+    <Content Include="assets\js\index.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Source\css\modal.css" />

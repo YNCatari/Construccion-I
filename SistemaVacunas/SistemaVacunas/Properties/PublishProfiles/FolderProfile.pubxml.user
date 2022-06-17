@@ -17,6 +17,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="assets/css/icons.min.css">
       <publishTime>06/16/2022 19:40:18</publishTime>
     </File>
+    <File Include="assets/css/login.css">
+      <publishTime>06/17/2022 12:04:35</publishTime>
+    </File>
     <File Include="assets/css/vendor/32px.png">
       <publishTime>06/16/2022 19:40:18</publishTime>
     </File>
@@ -203,6 +206,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="assets/images/file-searching.svg">
       <publishTime>06/03/2022 20:12:37</publishTime>
     </File>
+    <File Include="assets/images/gg.jpg">
+      <publishTime>06/17/2022 11:47:01</publishTime>
+    </File>
     <File Include="assets/images/help-icon.svg">
       <publishTime>06/03/2022 20:12:37</publishTime>
     </File>
@@ -236,6 +242,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="assets/images/report.svg">
       <publishTime>06/03/2022 20:12:37</publishTime>
     </File>
+    <File Include="assets/images/sica.jpg">
+      <publishTime>06/17/2022 12:02:07</publishTime>
+    </File>
+    <File Include="assets/images/sss.jpg">
+      <publishTime>06/17/2022 11:59:29</publishTime>
+    </File>
     <File Include="assets/images/startman.svg">
       <publishTime>06/03/2022 20:12:37</publishTime>
     </File>
@@ -251,11 +263,17 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="assets/images/vac.png">
       <publishTime>06/16/2022 19:40:17</publishTime>
     </File>
+    <File Include="assets/images/vaccine.jpg">
+      <publishTime>06/17/2022 12:03:51</publishTime>
+    </File>
     <File Include="assets/images/waves.png">
       <publishTime>06/03/2022 20:12:37</publishTime>
     </File>
     <File Include="assets/js/app.min.js">
       <publishTime>06/16/2022 19:40:19</publishTime>
+    </File>
+    <File Include="assets/js/index.js">
+      <publishTime>06/17/2022 10:49:04</publishTime>
     </File>
     <File Include="assets/js/pages/demo.apex-area.js">
       <publishTime>06/16/2022 19:40:19</publishTime>
@@ -702,10 +720,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 19:40:22</publishTime>
     </File>
     <File Include="bin/SistemaVacunas.dll">
-      <publishTime>06/17/2022 10:07:11</publishTime>
+      <publishTime>06/17/2022 12:09:24</publishTime>
     </File>
     <File Include="bin/SistemaVacunas.pdb">
-      <publishTime>06/17/2022 10:07:11</publishTime>
+      <publishTime>06/17/2022 12:09:24</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>06/16/2022 19:40:20</publishTime>
@@ -849,7 +867,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 19:40:18</publishTime>
     </File>
     <File Include="Views/Login/Index.cshtml">
-      <publishTime>06/16/2022 19:40:18</publishTime>
+      <publishTime>06/17/2022 11:52:19</publishTime>
     </File>
     <File Include="Views/Medico/Agregar.cshtml">
       <publishTime>06/16/2022 20:49:53</publishTime>
@@ -900,7 +918,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 19:40:18</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/17/2022 10:14:55</publishTime>
+      <publishTime>06/17/2022 12:09:27</publishTime>
     </File>
   </ItemGroup>
 </Project>
