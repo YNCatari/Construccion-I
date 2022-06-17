@@ -1,143 +1,153 @@
 ﻿
 @{
-	ViewBag.Title = "Index";
+    ViewBag.Title = "Index";
 }
 <p>Bienvenidos a EsSalud   Sistema de Gestión de Vacunas</p>
 <center><img src="~/assets/images/home.png" />  </center>
-<center>
-	<main class="content">
-		<div class="container-fluid p-0">
-			<div class="row">
-				<div class="col-12 col-md-6 col-xl d-flex">
-					<div class="card flex-fill">
-						<div class="card-body py-4">
-							<div class="float-end text-success">
-								1%
-							</div>
-							<h4 class="mb-2">Usuarios</h4>
-							<div class="mb-1">
-								<strong>
-									1
-								</strong>
 
-							</div>
+@ViewBag.idUsuario
+@ViewBag.NomUsu
+@ViewBag.Rol
 
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-md-6 col-xl d-flex">
-					<div class="card flex-fill">
-						<div class="card-body py-4">
-							<div class="float-end text-success">
-								1%
-							</div>
-							<h4 class="mb-2">Medicos</h4>
-							<div class="mb-1">
-								<strong>
-									1
-								</strong>
+<div class="row">
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            <a href="~/Usuarios/Index" class="tile">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> Total Usuarios</div>
+                            </a>
+                            
+                            <div><img src="~/assets/images/usuario.png" /></div>
+                        </div>
 
-							</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-book fa-2x text-black-50"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                            <a href="~/Medico/Index" class="tile">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1"> Cantidad Medicos</div>
+                            </a>      
+                            <div><img src="~/assets/images/doc.png" /></div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-users fa-2x text-black-50"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                            <a href="~/Citas/Index" class="tile">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    Cantidad Vacunados
+                                </div>
+                            </a>
+                            <div><img src="~/assets/images/vac.png" /></div>
+                        </div>
 
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-md-6 col-xl d-flex">
-					<div class="card flex-fill">
-						<div class="card-body py-4">
-							<div class="float-end text-danger">
-								1%
-							</div>
-							<h4 class="mb-2">Vacunas</h4>
-							<div class="mb-1">
-								<strong>
-									1
-								</strong>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-clipboard-list fa-2x text-black-50"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pending Requests Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-danger shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                            <a href="~/Citas/Reportes" class="tile">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    Total Reportes
+                                </div>
+                            </a>
+                           
+                            <div><img src="~/assets/images/rep.png" /></div>
+                        </div>
 
-							</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-list-ol fa-2x text-black-50"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-md-6 col-xl d-flex">
-					<div class="card flex-fill">
-						<div class="card-body py-4">
-							<div class="float-end text-success">
-								1%
-							</div>
-							<h4 class="mb-2">Pacientes</h4>
-							<div class="mb-1">
-								<strong>
-									1
-								</strong>
-
-							</div>
-
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-md-6 col-xl d-none d-xxl-flex">
-					<div class="card flex-fill">
-						<div class="card-body py-4">
-							<div class="float-end text-danger">
-								2%
-							</div>
-							<h4 class="mb-2">Reportes</h4>
-							<div class="mb-1">
-								<strong>
-									3
-								</strong>
-
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</main>
-</center>
-<input type="checkbox" id="cerrar">
-<label for="cerrar" id="btn-cerrar">X</label>
-<div class="modal">
-	<div class="contenido">
-		<br>
-		<center>
-			<h4>Bienvenidos a  Sistema de Gestión de Vacunas</h4>
-			<p>Comunicado Importante</p>
-			<p>
-				Estimado usuario:
-				El sistema de Gestión de Vacunas se encarga de registrar requerimientos en el Sistema de Gestión de Vacunas de EsSalud, para absolver cualquier duda o consulte sobre la Administacion del Sistema debe dirigirse a revisar  primero a opcion Descargar el Manual de Usuario, publicados en la web .
-			</p>
-			<img src="~/assets/images/home.png" alt="">
-			<div class="row" style="margin: auto; height: 100%">
-				<div class="col-lg-9"><div class="item-dj__title">Manual de Usuarios</div></div>
-				<div class="text-center col-lg-3">
-					<a href="~/assets/doc/formato01.pdf" target="_blank" class="item-dj__download">
-						<span class="item-dj__download-text">Descargar</span>
-					</a>
-				</div>
-			</div>
-		</center>
-	</div>
 </div>
+
+
+
+
+
+
+@*<input type="checkbox" id="cerrar">
+    <label for="cerrar" id="btn-cerrar">X</label>
+    <div class="modal">
+        <div class="contenido">
+            <br>
+            <center>
+                <h4>Bienvenidos a  Sistema de Gestión de Vacunas</h4>
+                <p>Comunicado Importante</p>
+                <p>
+                    Estimado usuario:
+                    El sistema de Gestión de Vacunas se encarga de registrar requerimientos en el Sistema de Gestión de Vacunas de EsSalud, para absolver cualquier duda o consulte sobre la Administacion del Sistema debe dirigirse a revisar  primero a opcion Descargar el Manual de Usuario, publicados en la web .
+                </p>
+                <img src="~/assets/images/home.png" alt="">
+                <div class="row" style="margin: auto; height: 100%">
+                    <div class="col-lg-9"><div class="item-dj__title">Manual de Usuarios</div></div>
+                    <div class="text-center col-lg-3">
+                        <a href="~/assets/doc/formato01.pdf" target="_blank" class="item-dj__download">
+                            <span class="item-dj__download-text">Descargar</span>
+                        </a>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </div>*@
 
 
 <center><div id="reloj" style="font-size:30px;"></div></center>
 <script type="text/javascript">
-	function startTime() {
-		today = new Date();
-		h = today.getHours();
-		m = today.getMinutes();
-		s = today.getSeconds();
-		m = checkTime(m);
-		s = checkTime(s);
-		document.getElementById('reloj').innerHTML = h + ":" + m + ":" + s;
-		t = setTimeout('startTime()', 500);
-	}
-	function checkTime(i) { if (i < 10) { i = "0" + i; } return i; }
-	window.onload = function () { startTime(); }
+    function startTime() {
+        today = new Date();
+        h = today.getHours();
+        m = today.getMinutes();
+        s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('reloj').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout('startTime()', 500);
+    }
+    function checkTime(i) { if (i < 10) { i = "0" + i; } return i; }
+    window.onload = function () { startTime(); }
 </script>
 
 

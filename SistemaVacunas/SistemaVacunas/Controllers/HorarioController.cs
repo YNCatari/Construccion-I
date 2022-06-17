@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using SistemaVacunas.Models;
 namespace SistemaVacunas.Controllers
 {
+    [Authorize]
     public class HorarioController : Controller
     {
         // GET: Horario

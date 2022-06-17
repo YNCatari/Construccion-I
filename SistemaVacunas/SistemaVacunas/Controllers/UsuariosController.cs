@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using SistemaVacunas.Models;
 namespace SistemaVacunas.Controllers
 {
+    [Authorize]
     public class UsuariosController : Controller
     {
         // GET: Usuarios
@@ -18,6 +19,7 @@ namespace SistemaVacunas.Controllers
         //*Todo: Metodo de Buscar y Listar Usuarios
         public ActionResult Index(string criterio)
         {
+           
             //* Si es Vacio o Nulo el Metodo Lista Todo los datos de Usuarios*/
             if (criterio == null || criterio == "")
             {

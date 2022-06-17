@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{ 
+    Layout = null; 
+  }
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,6 +20,7 @@
     <title>Dashboard / EsSalud</title>
     <!-- App css -->
     <link href="~/Source/css/app.css" rel="stylesheet" />
+    <link href="~/Source/css/sb-admin-2.css" rel="stylesheet" />
     <link href="~/Source/css/highcharts.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css" rel="stylesheet" />
     <link href="~/Source/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -30,6 +35,7 @@
     <script src="~/Source/js/exporting.js"></script>
     <script src="~/Source/js/export-data.js"></script>
     <script src="~/Source/js/accessibility.js"></script>
+    <script src="~/Source/js/variable-pie.js"></script>
 
     <link href="~/Source/css/modal.css" rel="stylesheet" />
 
@@ -37,11 +43,11 @@
 
 <body>
 
-  
+
 
     <div class="wrapper">
         <!-- Navbar -->
-       
+
 
         <nav id="sidebar" class="sidebar">
             <div class="sidebar-content js-simplebar">
@@ -169,8 +175,8 @@
                         </a>
                         <!--Inicia SubMenu de Reportes -->
                         <ul id="maps" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                            <li class="sidebar-item"><a class="sidebar-link" href="#">Reportes Frecuencia</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="~/Medico/ReportPie">Reportes Medicos</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="~/Citas/Reportes">Reportes Frecuencia</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="~/Medico/ReportPie">Reportes Frecuencia</a></li>
 
                         </ul>
                         <!--Fin SubMenu de Reportes -->
@@ -200,7 +206,7 @@
                     document.write("Hoy es: " + dia[d.getDay()]);
                 </script>
                 <script type="text/javascript">
-                    
+
                     function makeArray() {
                         for (i = 0; i < makeArray.arguments.length; i++)
                             this[i + 1] = makeArray.arguments[i];
@@ -213,7 +219,7 @@
                     var yy = date.getYear();
                     var year = (yy < 1000) ? yy + 1900 : yy;
                     document.write("" + day + " de " + months[month] + " del " + year);
-                   
+
                 </script>
 
 
@@ -267,7 +273,7 @@
 
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
 
-                                <img src="~/Source/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Administrador" /> <span class="text-dark">Administrador</span>
+                                <img src="~/Source/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Administrador" /> <span class="text-dark">@User.Identity.Name</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
@@ -300,20 +306,25 @@
                     <div class="row text-muted">
                         <div class="col-6 text-start">
                             <p class="mb-0">
-                                <a href="#" class="text-muted"><strong>&copy;<script languaje="JavaScript">
-    var mydate = new Date()
-    var year = mydate.getYear()
-    if (year < 1000)
-        year += 1900
-    var day = mydate.getDay()
-    var month = mydate.getMonth()
-    var daym = mydate.getDate()
-    if (daym < 10)
-        daym = "0" + daym
-    var dayarray = new Array("Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado")
-    var montharray = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
-    document.write(" Tacna, " + daym + " de " + montharray[month] + " de " + year + " ")
-</script></strong></a> 
+                                <a href="#" class="text-muted">
+                                    <strong>
+                                        &copy;
+                                        <script languaje="JavaScript">
+                                            var mydate = new Date()
+                                            var year = mydate.getYear()
+                                            if (year < 1000)
+                                                year += 1900
+                                            var day = mydate.getDay()
+                                            var month = mydate.getMonth()
+                                            var daym = mydate.getDate()
+                                            if (daym < 10)
+                                                daym = "0" + daym
+                                            var dayarray = new Array("Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado")
+                                            var montharray = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+                                            document.write(" Tacna, " + daym + " de " + montharray[month] + " de " + year + " ")
+                                        </script>
+                                    </strong>
+                                </a>
                             </p>
                         </div>
                         <div class="col-6 text-end">

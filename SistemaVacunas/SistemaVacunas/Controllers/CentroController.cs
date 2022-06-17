@@ -3,6 +3,7 @@
 /*CU: Centro - 10*/
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 using SistemaVacunas.Models;
 namespace SistemaVacunas.Controllers
 {
+    [Authorize]
     public class CentroController : Controller
     {
         // GET: Centro

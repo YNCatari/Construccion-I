@@ -11,11 +11,13 @@ using SistemaVacunas.Models;
 
 namespace SistemaVacunas.Controllers
 {
+    [Authorize]
     public class RolController : Controller
     {
         // GET: Rol
         private Rol objRol = new Rol();
         //*Todo: Metodo de Buscar y Listar Rol
+      
         public ActionResult Index(string criterio)
         {
             //* Si es Vacio o Nulo el Metodo Lista Todo los datos de Rol*/
@@ -30,6 +32,7 @@ namespace SistemaVacunas.Controllers
             }
         }
         //*Todo: Metodo de Agregar  Rol
+        
         public ActionResult Agregar(int id = 0)
         {
             //* Si el ID del Rol es 0,Agrega,si no Obtiene el Rol para Actualizar
@@ -38,6 +41,7 @@ namespace SistemaVacunas.Controllers
                    objRol.Obtener(id));
 
         }
+        
         //*Todo: Metodo de Registrar Rol
         public ActionResult Registrar(Rol model)
         {
@@ -56,6 +60,7 @@ namespace SistemaVacunas.Controllers
                 return View("~/Rol/Agregar");
             }
         }
+        
         //*Todo: Metodo de Buscar Rol
         public ActionResult Buscar(string criterio)
         {

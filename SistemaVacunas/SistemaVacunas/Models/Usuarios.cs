@@ -76,7 +76,7 @@ namespace SistemaVacunas.Models
                         .SingleOrDefault();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }

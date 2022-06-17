@@ -3,6 +3,7 @@
 /*CU: Cita - 6*/
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 /*TODO: Llamando a la clase de  Citas */
@@ -11,6 +12,7 @@ using System.Web.Mvc;
 
 namespace SistemaVacunas.Controllers
 {
+    [Authorize]
     public class CitasController : Controller
     {
         private Tipo_Dosis objTipo = new Tipo_Dosis();
