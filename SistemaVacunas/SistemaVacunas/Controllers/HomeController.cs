@@ -10,6 +10,7 @@ using SistemaVacunas.Models;
 namespace SistemaVacunas.Controllers
 {
     [Authorize]
+    [HandleError]
     public class HomeController : Controller
     {
         // GET: Home

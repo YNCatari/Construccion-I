@@ -266,6 +266,7 @@
     <Compile Include="Controllers\CentroController.cs" />
     <Compile Include="Controllers\CitasController.cs" />
     <Compile Include="Controllers\DosisController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HorarioController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -351,6 +352,7 @@
     <Content Include="Views\Medico\ReportPie.cshtml" />
     <Content Include="Views\Citas\Ver.cshtml" />
     <Content Include="Views\Citas\Reportes.cshtml" />
+    <Content Include="Views\Error\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

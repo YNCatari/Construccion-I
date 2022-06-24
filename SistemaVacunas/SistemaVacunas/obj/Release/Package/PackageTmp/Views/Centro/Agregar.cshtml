@@ -44,20 +44,39 @@
                     @Html.ValidationMessageFor(x => x.Calle, null, new { @class = "label label-danger" })
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            
+            <div class="col-12 col-md-4">
                 <div class="form-group">
-                    <label for="producto_Direccion" class="bmd-label-floating">Ciudad:</label>
-                    @Html.TextBoxFor(x => x.Ciudad, new { @class = "form-control" })
+                    <label for="producto_estado" class="bmd-label-floating">Ciudad / Provincia</label>
+                    <select name="Ciudad" class="form-control">
+                        <option @(Model.Ciudad == "Tacna" ? "selected" : "") value="Tacna">Tacna</option>
+                       
+                    </select>
                     @Html.ValidationMessageFor(x => x.Ciudad, null, new { @class = "label label-danger" })
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+
+            <div class="col-12 col-md-4">
                 <div class="form-group">
-                    <label for="producto_Telefono" class="bmd-label-floating">Distrito:</label>
-                    @Html.TextBoxFor(x => x.Distrito, new { @class = "form-control" })
+                    <label for="producto_estado" class="bmd-label-floating">Distrito</label>
+                    <select name="Distrito" class="form-control">
+                         <option @(Model.Distrito == "Tacna" ? "selected" : "") value="Tacna">Tacna</option>
+                        <option @(Model.Distrito == "Tacna" ? "selected" : "") value="Tacna">Tacna</option>
+                        <option @(Model.Distrito == "Alto de la Alianza" ? "selected" : "") value="Alto de la Alianza">Alto de la Alianza</option>
+                        <option @(Model.Distrito == "Palca" ? "selected" : "") value="Palca">Palca</option>
+                        <option @(Model.Distrito == "Calana" ? "selected" : "") value="Calana">Calana</option>
+                        <option @(Model.Distrito == "Ciudad Nueva" ? "selected" : "") value="Ciudad Nueva">Ciudad Nueva</option>
+                        <option @(Model.Distrito == "Coronel Gregorio Albarracín Lanchipa" ? "selected" : "") value="Coronel Gregorio Albarracín Lanchipa">Coronel Gregorio Albarracín Lanchipa</option>
+                        <option @(Model.Distrito == "Inclán" ? "selected" : "") value="Inclán">Inclán</option>
+                        <option @(Model.Distrito == "La Yarada-Los Palos" ? "selected" : "") value="La Yarada-Los Palos">La Yarada-Los Palos</option>
+                        <option @(Model.Distrito == "Pachía" ? "selected" : "") value="Pachía">Pachía</option>
+                        <option @(Model.Distrito == "Pocollay" ? "selected" : "") value="Pocollay">Pocollay</option>
+                        <option @(Model.Distrito == "Sama" ? "selected" : "") value="Sama">Sama</option>
+                    </select>
                     @Html.ValidationMessageFor(x => x.Distrito, null, new { @class = "label label-danger" })
                 </div>
             </div>
+
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="producto_contraseña" class="bmd-label-floating">Codigo Postal:</label>

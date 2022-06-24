@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\yncat\Downloads\demo</_PublishTargetUrl>
-    <History>True|2022-06-17T15:07:30.1721426Z;True|2022-06-04T16:27:32.9071379-05:00;True|2022-06-04T08:16:02.8994170-05:00;True|2022-05-24T11:44:36.6873465-05:00;True|2022-05-18T13:13:02.6403499-05:00;True|2022-05-18T12:07:23.2681758-05:00;True|2022-04-08T20:51:13.2551968-05:00;True|2022-04-08T20:27:35.8864616-05:00;True|2021-11-01T11:08:37.4093123-05:00;</History>
+    <History>True|2022-06-24T20:46:44.8439799Z;True|2022-06-23T16:26:26.1161119-05:00;True|2022-06-17T10:07:30.1721426-05:00;True|2022-06-04T16:27:32.9071379-05:00;True|2022-06-04T08:16:02.8994170-05:00;True|2022-05-24T11:44:36.6873465-05:00;True|2022-05-18T13:13:02.6403499-05:00;True|2022-05-18T12:07:23.2681758-05:00;True|2022-04-08T20:51:13.2551968-05:00;True|2022-04-08T20:27:35.8864616-05:00;True|2021-11-01T11:08:37.4093123-05:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/css/app-dark.min.css">
@@ -720,10 +720,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 19:40:22</publishTime>
     </File>
     <File Include="bin/SistemaVacunas.dll">
-      <publishTime>06/17/2022 12:09:24</publishTime>
+      <publishTime>06/24/2022 15:46:34</publishTime>
     </File>
     <File Include="bin/SistemaVacunas.pdb">
-      <publishTime>06/17/2022 12:09:24</publishTime>
+      <publishTime>06/24/2022 15:46:34</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>06/16/2022 19:40:20</publishTime>
@@ -834,7 +834,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 21:59:17</publishTime>
     </File>
     <File Include="Views/Centro/Agregar.cshtml">
-      <publishTime>06/16/2022 19:40:18</publishTime>
+      <publishTime>06/23/2022 14:16:29</publishTime>
     </File>
     <File Include="Views/Centro/Index.cshtml">
       <publishTime>06/16/2022 19:40:18</publishTime>
@@ -857,8 +857,11 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Views/Dosis/Index.cshtml">
       <publishTime>06/16/2022 19:40:18</publishTime>
     </File>
+    <File Include="Views/Error/Error.cshtml">
+      <publishTime>06/24/2022 15:44:07</publishTime>
+    </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>06/17/2022 10:03:40</publishTime>
+      <publishTime>06/23/2022 14:10:04</publishTime>
     </File>
     <File Include="Views/Horario/Agregar.cshtml">
       <publishTime>06/16/2022 19:40:18</publishTime>
@@ -867,10 +870,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 19:40:18</publishTime>
     </File>
     <File Include="Views/Login/Index.cshtml">
-      <publishTime>06/17/2022 11:52:19</publishTime>
+      <publishTime>06/23/2022 14:13:22</publishTime>
     </File>
     <File Include="Views/Medico/Agregar.cshtml">
-      <publishTime>06/16/2022 20:49:53</publishTime>
+      <publishTime>06/23/2022 09:54:21</publishTime>
     </File>
     <File Include="Views/Medico/Index.cshtml">
       <publishTime>06/16/2022 19:40:18</publishTime>
@@ -879,7 +882,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 22:29:32</publishTime>
     </File>
     <File Include="Views/Paciente/Agregar.cshtml">
-      <publishTime>06/16/2022 19:40:18</publishTime>
+      <publishTime>06/23/2022 13:50:55</publishTime>
     </File>
     <File Include="Views/Paciente/Index.cshtml">
       <publishTime>06/16/2022 19:40:18</publishTime>
@@ -891,7 +894,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 19:40:18</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>06/17/2022 08:42:11</publishTime>
+      <publishTime>06/23/2022 14:12:41</publishTime>
     </File>
     <File Include="Views/TipoDosis/Agregar.cshtml">
       <publishTime>06/16/2022 19:40:18</publishTime>
@@ -906,7 +909,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 19:40:18</publishTime>
     </File>
     <File Include="Views/Usuarios/Agregar.cshtml">
-      <publishTime>06/16/2022 19:40:18</publishTime>
+      <publishTime>06/23/2022 11:05:35</publishTime>
     </File>
     <File Include="Views/Usuarios/Index.cshtml">
       <publishTime>06/16/2022 19:40:18</publishTime>
@@ -918,7 +921,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/16/2022 19:40:18</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/17/2022 12:09:27</publishTime>
+      <publishTime>06/24/2022 15:46:36</publishTime>
     </File>
   </ItemGroup>
 </Project>

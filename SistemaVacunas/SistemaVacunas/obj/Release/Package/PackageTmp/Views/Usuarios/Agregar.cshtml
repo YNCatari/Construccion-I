@@ -23,7 +23,13 @@
         @Html.HiddenFor(x => x.Id_usuario)
         <div><i class="fas fa-user"></i> &nbsp; CREANDO NUEVO USUARIO</div>
         <div class="row">
-
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="producto_Dni" class="bmd-label-floating">DNI:</label>
+                    @Html.TextBoxFor(x => x.Dni, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Dni, null, new { @class = "label label-danger" })
+                </div>
+            </div>
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="producto_nombre" class="bmd-label-floating">Nombre :</label>
@@ -38,13 +44,7 @@
                     @Html.ValidationMessageFor(x => x.Apellidos, null, new { @class = "label label-danger" })
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="form-group">
-                    <label for="producto_Dni" class="bmd-label-floating">Documento Identidad:</label>
-                    @Html.TextBoxFor(x => x.Dni, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(x => x.Dni, null, new { @class = "label label-danger" })
-                </div>
-            </div>
+
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="producto_Direccion" class="bmd-label-floating">Direccion:</label>
