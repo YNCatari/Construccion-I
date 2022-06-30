@@ -4,119 +4,123 @@
 }
 <h3><strong>Vaccination</strong> Dashboard</h3>
 <p><h4>Bienvenidos a<strong> Sistema de Gestión de Vacunas</strong></h4></p>
-    <center><img src="~/assets/images/home.png" />  </center>
+<center><img src="~/assets/images/home.png" />  </center>
 
-    @ViewBag.idUsuario
-    @ViewBag.NomUsu
-    @ViewBag.Rol
+@ViewBag.idUsuario
+@ViewBag.NomUsu
+@ViewBag.Rol
 
-    <div class="row">
-        <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                <a href="~/Usuarios/Index" class="tile">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> Total Usuarios</div>
-                                </a>
+<div class="row">
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            <a href="~/Usuarios/Index" class="tile">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> Total Usuarios</div>
+                            </a>
 
-                                <div><img src="~/assets/images/usuario.png" /></div>
-                            </div>
-
+                            <div><img src="~/assets/images/usuario.png" /></div>
                         </div>
-                        <div class="col-auto">
-                            <i class="fas fa-book fa-2x text-black-50"></i>
-                        </div>
+
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-book fa-2x text-black-50"></i>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                <a href="~/Medico/Index" class="tile">
-                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1"> Cantidad Medicos</div>
-                                </a>
-                                <div><img src="~/assets/images/doc.png" /></div>
-                            </div>
+    </div>
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                            <a href="~/Medico/Index" class="tile">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1"> Cantidad Medicos</div>
+                            </a>
+                            <div><img src="~/assets/images/doc.png" /></div>
+                        </div>
 
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-users fa-2x text-black-50"></i>
-                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-users fa-2x text-black-50"></i>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                <a href="~/Citas/Index" class="tile">
-                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                        Cantidad Vacunados
-                                    </div>
-                                </a>
-                                <div><img src="~/assets/images/vac.png" /></div>
-                            </div>
+    </div>
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                            <a href="~/Citas/Index" class="tile">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    Cantidad Vacunados
+                                </div>
+                            </a>
+                            <div><img src="~/assets/images/vac.png" /></div>
+                        </div>
 
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-clipboard-list fa-2x text-black-50"></i>
-                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-clipboard-list fa-2x text-black-50"></i>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Pending Requests Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-danger shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                <a href="~/Citas/Reportes" class="tile">
-                                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                        Total Reportes
-                                    </div>
-                                </a>
+    </div>
+    <!-- Pending Requests Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-danger shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                            <a href="~/Citas/Reportes" class="tile">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    Total Reportes
+                                </div>
+                            </a>
 
-                                <div><img src="~/assets/images/rep.png" /></div>
-                            </div>
+                            <div><img src="~/assets/images/rep.png" /></div>
+                        </div>
 
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-list-ol fa-2x text-black-50"></i>
-                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-list-ol fa-2x text-black-50"></i>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
+</div>
 
 
 
 
 
-    @*<input type="checkbox" id="cerrar">
-        <label for="cerrar" id="btn-cerrar">X</label>
-        <div class="modal">
-            <div class="contenido">
-                <br>
+
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="dt-body-center">Aviso</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
                 <center>
                     <h4>Bienvenidos a  Sistema de Gestión de Vacunas</h4>
-                    <p>Comunicado Importante</p>
+                    <p></p>
                     <p>
                         Estimado usuario:
                         El sistema de Gestión de Vacunas se encarga de registrar requerimientos en el Sistema de Gestión de Vacunas de EsSalud, para absolver cualquier duda o consulte sobre la Administacion del Sistema debe dirigirse a revisar  primero a opcion Descargar el Manual de Usuario, publicados en la web .
@@ -132,26 +136,29 @@
                     </div>
                 </center>
             </div>
-        </div>*@
+            
+        </div>
+    </div>
+</div>
+<center><div id="reloj" style="font-size:30px;"></div></center>
+<script type="text/javascript">
+    function startTime() {
+        today = new Date();
+        h = today.getHours();
+        m = today.getMinutes();
+        s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('reloj').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout('startTime()', 500);
+    }
+    function checkTime(i) { if (i < 10) { i = "0" + i; } return i; }
+    window.onload = function () { startTime(); }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#myModal').modal('toggle')
+    });
 
-
-    <center><div id="reloj" style="font-size:30px;"></div></center>
-    <script type="text/javascript">
-        function startTime() {
-            today = new Date();
-            h = today.getHours();
-            m = today.getMinutes();
-            s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('reloj').innerHTML = h + ":" + m + ":" + s;
-            t = setTimeout('startTime()', 500);
-        }
-        function checkTime(i) { if (i < 10) { i = "0" + i; } return i; }
-        window.onload = function () { startTime(); }
-    </script>
-
-
-
-
+</script>
 

@@ -8,7 +8,7 @@ namespace SistemaVacunas.Controllers
 {
     public class ErrorController : Controller
     {
-        // GET: Error
+        // GET: Error configuracion de pagina de Error 404
         public ActionResult Index()
         {
             return View();
