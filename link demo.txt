@@ -1,7 +1,16 @@
 Proyecto 
+
+ ADMINISTRADOR Y MEDICO
 https://www.essaluddemo.somee.com/
 
 Desplegado en Servidor Sommee
 
 User:admin@gmail.com
 Password:123456
+
+
+PACIENTE
+http://essaludpaciente.somee.com/
+User:rafaelmartin@gmail.com
+Password:123456
+

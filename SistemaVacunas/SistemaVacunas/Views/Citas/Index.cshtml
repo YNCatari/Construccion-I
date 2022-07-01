@@ -65,9 +65,10 @@
                             <td>@(item.Centro.Nombre)</td>
                             <td>@(item.Tipo_Dosis.Nombre)</td>
                             <td>@(item.Check1 == 1 ? "Confirmada" : "No Confirmada")</td>
-                            <td>@(item.Check2 == 1 ? "Realizada" : "No Realizada")</td>
+                            <td>@(item.Check2 == 1 ? "Confirmada" : "No Confirmada")</td>
                             <td>
-                                <a  href="~/Citas/Ver/@item.Id_citas" class="btn btn-primary">Ver</a>
+                                <a onclick="return confirm('Esta Seguro que desea Actualizar Datos del registro?')" href="~/Citas/Agregar/@item.Id_citas" class="btn btn-success">Actualizar</a>
+                                <a href="~/Citas/Ver/@item.Id_citas" class="btn btn-primary">Ver</a>
                                 <a onclick="return confirm('Esta Seguro que desea Cancelar el registro?')" href="~/Citas" class="btn btn-danger">Cancelar</a>
                             </td>
                         </tr>

@@ -132,8 +132,8 @@
             <div class="col-12 col-md-4">
                 @Html.LabelFor(x => x.Check1)
                 <select name="Check1" class="form-control">
-                    <option @(Model.Estado == "0" ? "selected" : "") value="0">Confirmada</option>
-                    <option @(Model.Estado == "1" ? "selected" : "") value="1">No Confirmada</option>
+                    <option @(Model.Estado == "1" ? "selected" : "") value="1">Confirmada</option>
+                    <option @(Model.Estado == "0" ? "selected" : "") value="0">No Confirmada</option>
                 </select>
                 @Html.ValidationMessageFor(x => x.Check1, null, new { @class = "label label-danger" })
             </div>
@@ -141,8 +141,8 @@
             <div class="col-12 col-md-4">
                 @Html.LabelFor(x => x.Check2)
                 <select name="Check2" class="form-control">
-                    <option @(Model.Estado == "0" ? "selected" : "") value="0">Realizada</option>
-                    <option @(Model.Estado == "1" ? "selected" : "") value="1">No Realizada</option>
+                    <option @(Model.Estado == "1" ? "selected" : "") value="1">Confirmada</option>
+                    <option @(Model.Estado == "0" ? "selected" : "") value="0">No Confirmada</option>
                 </select>
                 @Html.ValidationMessageFor(x => x.Check2, null, new { @class = "label label-danger" })
             </div>
